@@ -109,15 +109,14 @@ RSpec.describe ProductsController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
+    let!(:product) { create(:product) }
     it 'deletes the product' do
       expect { delete :destroy, params: { id: product } }.to change(Product, :count).by(-1)
     end
 
     it 'redirects to index view' do
-      post :create, params: { product: attributes_for(:product) }
-      expect(response).to redirect_to assigns(:product)
+      delete :destroy, params: { id: product }
+      expect(response).to redirect_to products_path
     end
   end
-
-
 end
