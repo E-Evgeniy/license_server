@@ -1,0 +1,4 @@
+<%= form_with model: @client, local: true do |form| %>
+  <%= form.label :name %><br>
+  <%= form.text_area :name, id: :client_name, class: 'text_field_conf' %>
+<% end %>

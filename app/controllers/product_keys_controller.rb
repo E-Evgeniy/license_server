@@ -1,0 +1,2 @@
+class ProductKeysController < ApplicationController
+end

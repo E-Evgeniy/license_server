@@ -1,0 +1,7 @@
+ru:
+  generals:
+    index:
+      keys: 'Ключи'
+      head: 'Сервер лицензий'
+      clients: 'Клиенты'
+      new_client: 'Новый клиент'

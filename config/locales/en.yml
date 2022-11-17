@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+
+  generals:
+    index:
+      keys: 'Keys'
+      head: 'License server'
+      clients: 'Clients'
+      new_client: 'New client'

@@ -7,6 +7,7 @@ class CreateProductKeys < ActiveRecord::Migration[6.1]
       t.string :status
       t.string :comment
       t.string :type
+      t.references :product, foreign_key: true
 
       t.timestamps
     end
