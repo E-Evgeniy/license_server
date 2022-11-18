@@ -5,3 +5,15 @@ ru:
       head: 'Сервер лицензий'
       clients: 'Клиенты'
       new_client: 'Новый клиент'
+  
+  shared:
+    nav:
+      logout:  'Выйти'
+      welcome: 'Добро пожаловать'
+      login:   'Войти'
+      sign_up: 'Зарегистрироваться'
+      lang:    'English version'
+  
+  client:
+    new:
+      header: 'Создание нового клиента'

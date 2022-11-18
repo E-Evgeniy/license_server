@@ -38,3 +38,11 @@ en:
       head: 'License server'
       clients: 'Clients'
       new_client: 'New client'
+      
+  shared:
+    nav:
+      logout: 'Logout'
+      welcome: 'Welcome'
+      login: 'Log in'
+      sign_up: 'Sign up'
+      lang: 'Русская версия'
