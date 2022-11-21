@@ -38,6 +38,11 @@ en:
       head: 'License server'
       clients: 'Clients'
       new_client: 'New client'
+
+  clients:
+    new:
+      on_header: ' To the main'
+      header: 'Creating a new client'
       
   shared:
     nav:

@@ -1,4 +1,10 @@
 <%= form_with model: @client, local: true do |form| %>
   <%= form.label :name %><br>
   <%= form.text_area :name, id: :client_name, class: 'text_field_conf' %>
+  <p>
+  <%= form.label :email %><br>
+  <%= form.text_field :email, id: :client_email, class: 'text_field_conf' %>
+  <p>
+  <%= form.label :comment %><br>
+  <%= form.text_area :comment, id: :client_comment, class: 'text_field_conf' %>
 <% end %>

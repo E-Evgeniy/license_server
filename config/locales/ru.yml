@@ -17,3 +17,4 @@ ru:
   client:
     new:
       header: 'Создание нового клиента'
+      on_header: 'На главную'
