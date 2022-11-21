@@ -14,7 +14,10 @@ ru:
       sign_up: 'Зарегистрироваться'
       lang:    'English version'
   
-  client:
+  clients:
     new:
       header: 'Создание нового клиента'
       on_header: 'На главную'
+      
+    form:
+      create: 'Создать'

@@ -44,6 +44,9 @@ en:
       on_header: ' To the main'
       header: 'Creating a new client'
       
+    form:
+      create: 'Создать'
+      
   shared:
     nav:
       logout: 'Logout'
