@@ -38,12 +38,14 @@ en:
       head: 'License server'
       clients: 'Clients'
       new_client: 'New client'
+      find_clients: 'Find clients'
+      find_keys: 'Find keys'
 
   clients:
     new:
       on_header: ' To the main'
       header: 'Creating a new client'
-      
+
     form:
       create: 'Создать'
       

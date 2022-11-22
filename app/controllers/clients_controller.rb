@@ -15,6 +15,15 @@ class ClientsController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def find
+  end
+
+  def result
+  end
+
   private
 
   def client_params

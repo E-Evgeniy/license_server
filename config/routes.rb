@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   resources :product_keys
 
   root to: 'generals#index'
+
+  get 'find', to: 'clients#find', as: :find
+  get 'result', to: 'find_clients#result', as: :result
   
 end

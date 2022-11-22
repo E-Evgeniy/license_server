@@ -5,6 +5,8 @@ ru:
       head: 'Сервер лицензий'
       clients: 'Клиенты'
       new_client: 'Новый клиент'
+      find_clients: 'Поиск клиентов'
+      find_keys: 'Поиск ключей'
   
   shared:
     nav:
