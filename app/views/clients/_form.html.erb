@@ -8,6 +8,6 @@
   <%= form.label :comment, class: 'field_description' %><br>
   <%= form.text_area :comment, id: :client_comment, class: 'text_field_comment' %>
   <p>
-  <%= form.submit t('.create'), class: 'but_create' %>
+  <%= form.submit t('.create'), class: 'but_form', params: { lang: I18n.locale } %>
   <p>
 <% end %>

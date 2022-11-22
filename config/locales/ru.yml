@@ -17,9 +17,21 @@ ru:
       lang:    'English version'
   
   clients:
+    show:
+      header: 'Клиент'
     new:
       header: 'Создание нового клиента'
       on_header: 'На главную'
       
     form:
       create: 'Создать'
+    
+    find:
+      header: 'Поиск клиентов'
+      name: 'Имя'
+      email: 'Почта'
+      comment: 'Комментарий'
+      find: 'Поиск'
+      text_filed: 'Можете оставить пустым'
+      comment_field: 'Введите слово или фразу содержащуюся в нужном комментарии. Или оставте пустым'
+      on_header: 'На главную'

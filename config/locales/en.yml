@@ -42,12 +42,23 @@ en:
       find_keys: 'Find keys'
 
   clients:
+    show:
+      header: 'Client'
     new:
       on_header: ' To the main'
       header: 'Creating a new client'
 
     form:
-      create: 'Создать'
+      create: 'Create'
+    
+    find:
+      header: 'Find clients'
+      name: 'Name'
+      email: 'Email'
+      comment: 'Comment'
+      find: 'Find'
+      text_filed: 'You can leave it empty'
+      comment_field: 'Enter the word or phrase contained in the desired comment. Or leave it empty'
       
   shared:
     nav:
@@ -56,3 +67,4 @@ en:
       login: 'Log in'
       sign_up: 'Sign up'
       lang: 'Русская версия'
+      on_header: ' To the main'
