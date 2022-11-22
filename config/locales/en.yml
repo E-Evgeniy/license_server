@@ -44,6 +44,12 @@ en:
   clients:
     show:
       header: 'Client'
+      email: 'Email'
+      comment: 'Comment'
+      reg_data: 'Date of registration'
+      active keys: 'Number of active keys'
+      all_keys: 'Total keys'
+
     new:
       on_header: ' To the main'
       header: 'Creating a new client'

@@ -1,3 +1,17 @@
 <div class = 'show_client'>
   <h2 class = 'page_header'><%= t('.header') + ' ' + @client.name %></h2>
+
+  <table class="client_table">
+    <col width="300">
+    <col width="220">
+    <col width="350">
+    <col width="150">
+    <col width="150">
+    <tr>
+    <th class = 'th_result'><%=t('.email')%></th>
+    <th class = 'th_result'><%= t('.comment') %></th>
+    <th class = 'th_result'><%= t('.reg_data') %></th>
+    <th class = 'th_result'><%= t('.active keys') %></th>
+    <th class = 'th_result'><%= t('.all_keys') %></th>
+  </tr>
 </div>

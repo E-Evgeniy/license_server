@@ -19,6 +19,12 @@ ru:
   clients:
     show:
       header: 'Клиент'
+      email: 'Почта'
+      comment: 'Комментарий'
+      reg_data: 'Дата регистрации'
+      active keys: 'Количество активных ключей'
+      all_keys: 'Всего ключей'
+
     new:
       header: 'Создание нового клиента'
       on_header: 'На главную'
