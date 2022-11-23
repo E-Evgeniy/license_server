@@ -53,6 +53,7 @@ en:
       give_key: 'Give a free key'
       edit_client: 'Edit the client'
       delete_client: 'Delete a client'
+      on_header: ' To the main'
 
     new:
       on_header: ' To the main'

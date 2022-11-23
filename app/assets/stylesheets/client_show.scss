@@ -24,9 +24,10 @@
     font-family: 'Dosis', sans;
     font-size: 15px;
     letter-spacing: 1px;
+    height:55px;
  }
 
- .button_client_show{
+ .button_client_show_new_key{
    background:#fff;
    width:280px;
    display:block;
@@ -49,12 +50,12 @@
       -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
          transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
  }
- .button_client_show:hover{
+ .button_client_show_new_key:hover{
    width:280px;
    height:55px;
    padding-top:1px;
    border:1px solid teal;
-   background:rgba(245, 241, 241, 0.932);
+   background:rgba(19, 219, 45, 0.295);
    margin: 20px auto;
    opacity:1;
    letter-spacing: 3px;
@@ -71,5 +72,134 @@
    max-width: 1200px;
    width: 100%;
    margin: 0 auto;
-   margin-top: 50px;
+   margin-top: 30px;
  }
+
+ .client_table {
+   margin-top: 50px;
+
+ }
+
+ .th_table_show_footer {
+   height: 7px;
+   background:rgb(238, 236, 236);
+ }
+
+ .button_client_show_delete{
+   background:#fff;
+   width:280px;
+   display:block;
+   height:55px;
+   align-self: center;
+   border:1px solid #000;
+   margin: 20px auto;
+   font-family: 'Dosis', sans;
+   font-size: 14px;
+   font-weight:200;
+   color:#000;
+   text-transform:uppercase;
+   text-decoration:none;
+   text-align:center;
+   opacity:.8;
+   letter-spacing: 1px;
+     -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+         transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+ }
+ .button_client_show_delete:hover{
+   width:280px;
+   height:55px;
+   padding-top:1px;
+   border:1px solid teal;
+   background:rgba(255, 0, 0, 0.308);
+   margin: 20px auto;
+   opacity:1;
+   letter-spacing: 3px;
+   -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+         transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+ }
+
+ .button_client_show_edit{
+   background:#fff;
+   width:280px;
+   display:block;
+   height:55px;
+   align-self: center;
+   border:1px solid #000;
+   margin: 20px auto;
+   font-family: 'Dosis', sans;
+   font-size: 14px;
+   font-weight:200;
+   color:#000;
+   text-transform:uppercase;
+   text-decoration:none;
+   text-align:center;
+   opacity:.8;
+   letter-spacing: 1px;
+     -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+         transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+ }
+ .button_client_show_edit:hover{
+   width:280px;
+   height:55px;
+   padding-top:1px;
+   border:1px solid teal;
+   background:rgba(255, 0, 0, 0.308);
+   margin: 20px auto;
+   opacity:1;
+   letter-spacing: 3px;
+   -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+         transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+ }
+
+ .button_client_show_get_key{
+   background:#fff;
+   width:280px;
+   display:block;
+   height:55px;
+   align-self: center;
+   border:1px solid #000;
+   margin: 20px auto;
+   font-family: 'Dosis', sans;
+   font-size: 14px;
+   font-weight:200;
+   color:#000;
+   text-transform:uppercase;
+   text-decoration:none;
+   text-align:center;
+   opacity:.8;
+   letter-spacing: 1px;
+     -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+         transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+ }
+ .button_client_show_get_key:hover{
+   width:280px;
+   height:55px;
+   padding-top:1px;
+   border:1px solid teal;
+   background:rgba(108, 152, 233, 0.411);
+   margin: 20px auto;
+   opacity:1;
+   letter-spacing: 3px;
+   -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+         transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+ }
+
+ 
+ 
+
+ .button_client_show_edit:hover{
+   background:rgba(255, 196, 0, 0.308);
+  }
+ 
