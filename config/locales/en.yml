@@ -49,6 +49,10 @@ en:
       reg_data: 'Date of registration'
       active keys: 'Number of active keys'
       all_keys: 'Total keys'
+      new_key: 'Add a new key'
+      give_key: 'Give a free key'
+      edit_client: 'Edit the client'
+      delete_client: 'Delete a client'
 
     new:
       on_header: ' To the main'

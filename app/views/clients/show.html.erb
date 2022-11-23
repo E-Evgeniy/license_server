@@ -17,7 +17,26 @@
     <td class = 'th_table_show'><%= @client.email %></td>
     <td class = 'th_table_show'><%= @client.comment %></td>
     <td class = 'th_table_show'><%= @client.created_at %></td>
-    <td class = 'th_table_show'>?</td>
+    <td class = 'th_table_show'><%= @client.product_keys.where(status: true).count %></td>
     <td class = 'th_table_show'><%= @client.product_keys.count %></td>
   </table>
+
+  <div class = 'button_client_show_block'>
+    <%= button_to t('.new_key'), new_client_path, method: :get,
+      class:"button_client_show", params: { lang: I18n.locale } %>
+    
+    <% if ProductKey.where(client_id: nil).where(status: true).exists? %>
+    <%= button_to t('.give_key'), new_client_path, method: :get,
+      class:"button_client_show", params: { lang: I18n.locale } %>
+    <% end %>
+
+    <%= button_to t('.edit_client'), new_client_path, method: :get,
+      class:"button_client_show", params: { lang: I18n.locale } %>
+
+    <%= button_to t('.delete_client'), new_client_path, method: :get,
+      class:"button_client_show", params: { lang: I18n.locale } %>
+  </div>
+
 </div>
+
+
