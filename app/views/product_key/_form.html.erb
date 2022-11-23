@@ -1,0 +1,11 @@
+<div class = 'main'>
+  <%= form_with url: "result", method: :get do |form| %>
+    <%= form.label :number_keys, t('.data_begin'), class: "name_field_find"%>
+    <%= form.date_field :volume_keys, class: "text_field_label"%>
+    <p>
+    <%= form.label :number_, t('.data_end'), class: "name_field_find"%>
+    <%= form.date_field :data_end, class: "text_field_label"%>
+    <p>
+    <%= button_to t('.find'), product_keys_path, method: :post, class:"but_form", params: { lang: I18n.locale } %>
+  <% end %>
+</div>

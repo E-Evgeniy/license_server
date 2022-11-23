@@ -29,7 +29,7 @@
   </table>
 
   <div class = 'button_client_show_block'>
-    <%= button_to t('.new_key'), new_client_path, method: :get,
+    <%= button_to t('.new_key'), new_product_key_path(@client.id), method: :get,
       class:"button_client_show_new_key", params: { lang: I18n.locale } %>
     
     <% if ProductKey.where(client_id: nil).where(status: true).exists? %>
