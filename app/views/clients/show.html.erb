@@ -8,10 +8,16 @@
     <col width="150">
     <col width="150">
     <tr>
-    <th class = 'th_result'><%=t('.email')%></th>
-    <th class = 'th_result'><%= t('.comment') %></th>
-    <th class = 'th_result'><%= t('.reg_data') %></th>
-    <th class = 'th_result'><%= t('.active keys') %></th>
-    <th class = 'th_result'><%= t('.all_keys') %></th>
-  </tr>
+      <th class = 'th_table_show_head'><%=t('.email')%></th>
+      <th class = 'th_table_show_head'><%= t('.comment') %></th>
+      <th class = 'th_table_show_head'><%= t('.reg_data') %></th>
+      <th class = 'th_table_show_head'><%= t('.active keys') %></th>
+      <th class = 'th_table_show_head'><%= t('.all_keys') %></th>
+    </tr>
+    <td class = 'th_table_show'><%= @client.email %></td>
+    <td class = 'th_table_show'><%= @client.comment %></td>
+    <td class = 'th_table_show'><%= @client.created_at %></td>
+    <td class = 'th_table_show'>?</td>
+    <td class = 'th_table_show'><%= @client.product_keys.count %></td>
+  </table>
 </div>

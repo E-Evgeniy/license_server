@@ -11,13 +11,14 @@ class ClientsController < ApplicationController
     @client = Client.new(client_params)
 
     if @client.save
-      #redirect_to @product
+      redirect_to @client
     else
       render :new
     end
   end
 
   def show
+    
   end
 
   def find
