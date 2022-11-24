@@ -1,3 +1,43 @@
 // Place all the styles related to the Product_key controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.form_common {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.form_new_key {
+    display: flex;
+    align-self: center;
+    padding-top:20px;
+}
+
+.lable_new_key_1 {
+    font-family: 'Dosis', sans;
+    width: 300px;
+    margin-top: 5px;
+}
+
+.field_new_key_1 {
+    font-family: 'Dosis', sans;
+    width: 300px;
+    margin-top: 5px;
+    height:40px;
+    font-size: 14px;
+    text-align:center;
+}
+
+.field_new_key_2 {
+    font-family: 'Dosis', sans;
+    width: 300px;
+    margin-top: 5px;
+    height:40px;
+    font-size: 14px;
+}
+
+.form_new_key {
+    width: 300px;
+}

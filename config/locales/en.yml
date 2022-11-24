@@ -33,9 +33,21 @@ en:
   hello: "Hello world"
 
   product_keys:
+    added_keys:
+      header: 'For the client'
+
     new:
       on_header: ' To the main'
-      header: 'Creating a new key'
+      header: 'Creating a new key for'
+
+    form:
+      create: 'Create'
+      volume_keys_filed: 'Enter a positive integer'
+      volume_keys: 'Number of licenses required'
+      volume_days: 'License validity period in days'
+      comment_filed: 'If necessary, enter a comment for the key'
+      comment: 'Comment'
+      key_type: 'Select the key type'
 
   generals:
     index:

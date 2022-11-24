@@ -26,7 +26,7 @@
 
   <div class = 'button_client_show_block'>
     <%= button_to t('.new_key'), new_product_key_path, method: :get,
-      class:"button_client_show_new_key", params: { lang: I18n.locale, clien_id: @client.id } %>
+      class:"button_client_show_new_key", params: { lang: I18n.locale, client_id: @client.id } %>
     
     <% if ProductKey.where(client_id: nil).where(status: true).exists? %>
     <%= button_to t('.give_key'), new_client_path, method: :get,

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root to: 'generals#index'
 
   get 'find', to: 'clients#find', as: :find
-  get 'result', to: 'find_clients#result', as: :result
+  get 'added_keys', to: 'actions_with_clients#added_keys', as: :added_keys
+
   
 end

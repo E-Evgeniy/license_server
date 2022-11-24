@@ -1,8 +1,20 @@
 ru:
   product_keys:
+    added_keys:
+      header: 'Для клиента'
+
     new:
       on_header: 'На главную'
-      header: 'Создание нового ключа'
+      header: 'Создание нового ключа для'
+
+    form:
+      create: 'Создать'
+      volume_keys_filed: 'Введите целое положительное число'
+      volume_keys: 'Количество необходимых лицензий'
+      volume_days: 'Срок действия лицензии в днях'
+      comment_filed: 'Если необходимо введите комментарий для ключа'
+      comment: 'Комментарий'
+      key_type: 'Выберите тип ключа'
 
   generals:
     index:
