@@ -1,7 +1,6 @@
 class ProductKeysController < ApplicationController
-  def new(client_id)
+  def new
     @product_key = ProductKey.new
-    @product_key.client_id = client_id
   end
 
   def create

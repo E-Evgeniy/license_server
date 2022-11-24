@@ -1,10 +1,6 @@
 <div class = 'show_client'>
   <h2 class = 'page_header'><%= t('.header') + ' ' + @client.name %></h2>
 
-  <div class = 'block_navigate'>
-      <a href="/" class="nav_botr"><%= t('.on_header') %></a>
-   </div>
-
   <table class="client_table">
     <col width="300">
     <col width="250">
@@ -29,8 +25,8 @@
   </table>
 
   <div class = 'button_client_show_block'>
-    <%= button_to t('.new_key'), new_product_key_path(@client.id), method: :get,
-      class:"button_client_show_new_key", params: { lang: I18n.locale } %>
+    <%= button_to t('.new_key'), new_product_key_path, method: :get,
+      class:"button_client_show_new_key", params: { lang: I18n.locale, clien_id: @client.id } %>
     
     <% if ProductKey.where(client_id: nil).where(status: true).exists? %>
     <%= button_to t('.give_key'), new_client_path, method: :get,

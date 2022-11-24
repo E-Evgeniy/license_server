@@ -32,6 +32,11 @@
 en:
   hello: "Hello world"
 
+  product_keys:
+    new:
+      on_header: ' To the main'
+      header: 'Creating a new key'
+
   generals:
     index:
       keys: 'Keys'

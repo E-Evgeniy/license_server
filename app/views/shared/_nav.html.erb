@@ -1,5 +1,6 @@
 <% lang = 'en' %>
 <% lang = 'ru' if I18n.locale == :en %> 
+   
 <p class="nav_user">
         <% if user_signed_in? %>
         <%= t('.welcome') %> <b><%= current_user.last_name %> <%= current_user.first_name %></b> |

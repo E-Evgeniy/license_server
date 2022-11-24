@@ -1,4 +1,9 @@
 ru:
+  product_keys:
+    new:
+      on_header: 'На главную'
+      header: 'Создание нового ключа'
+
   generals:
     index:
       keys: 'Ключи'
