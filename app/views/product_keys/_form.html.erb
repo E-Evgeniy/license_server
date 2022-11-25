@@ -6,13 +6,13 @@
     <%= form.label :number_days, t('.volume_days'), class: "lable_new_key_1"%><br>
     <%= form.number_field :number_days, class: "field_new_key_1", placeholder: t('.volume_keys_filed')%>
     <p>
-    <%= form.label :comment, t('.comment'), class: "lable_new_key_1"%><br>
-    <%= form.text_area :comment, class: "field_new_key_1", placeholder: t('.comment_filed')%>
-    <p>
     <div class = 'lable_new_key_1'>
     <%= t('.infinite_key') %><br>
     </div>
     <%= form.select :infinite_key, [['false'], ['true']] %>
+    <p>
+    <%= form.label :comment, t('.comment'), class: "lable_new_key_1"%><br>
+    <%= form.text_area :comment, class: "field_new_key_1", placeholder: t('.comment_filed')%>
     <p>
 
     <%= form.fields_for :key_type do |f| %>
