@@ -1,0 +1,13 @@
+<%= form_with model: @client, local: true do |form| %>
+  <%= form.label :name, class: 'field_description' %><br>
+  <%= form.text_area :name, id: :client_name, class: 'text_field_name' %>
+  <p>
+  <%= form.label :email, class: 'field_description' %><br>
+  <%= form.text_field :email, id: :client_email, class: 'text_field_email' %>
+  <p>
+  <%= form.label :comment, class: 'field_description' %><br>
+  <%= form.text_area :comment, id: :client_comment, class: 'text_field_comment' %>
+  <p>
+  <%= form.submit t('.create'), class: 'but_form', params: { lang: I18n.locale } %>
+  <p>
+<% end %>

@@ -1,0 +1,66 @@
+ru:
+  product_keys:
+    added_keys:
+      header: 'Для клиента'
+
+    new:
+      on_header: 'На главную'
+      header: 'Создание нового ключа для'
+
+    form:
+      create: 'Создать'
+      volume_keys_filed: 'Введите целое положительное число'
+      volume_keys: 'Количество необходимых лицензий'
+      volume_days: 'Срок действия лицензии в днях'
+      comment_filed: 'Если необходимо введите комментарий для ключа'
+      comment: 'Комментарий'
+      key_type: 'Выберите тип ключа'
+      infinite_key: 'Выберите true если хотите сделать ключ бессрочным'
+
+  generals:
+    index:
+      keys: 'Ключи'
+      head: 'Сервер лицензий'
+      clients: 'Клиенты'
+      new_client: 'Новый клиент'
+      find_clients: 'Поиск клиентов'
+      find_keys: 'Поиск ключей'
+  
+  shared:
+    nav:
+      logout:  'Выйти'
+      welcome: 'Добро пожаловать'
+      login:   'Войти'
+      sign_up: 'Зарегистрироваться'
+      lang:    'English version'
+  
+  clients:
+    show:
+      header: 'Клиент'
+      email: 'Почта'
+      comment: 'Комментарий'
+      reg_data: 'Дата регистрации'
+      active keys: 'Количество активных ключей'
+      all_keys: 'Всего ключей'
+      new_key: 'Добавить новый ключ'
+      give_key: 'Дать свободный ключ'
+      edit_client: 'Редактировать клиента'
+      delete_client: 'Удалить клиента'
+      on_header: 'На главную'
+
+    new:
+      header: 'Создание нового клиента'
+      on_header: 'На главную'
+      
+    form:
+      create: 'Создать'
+    
+    find:
+      header: 'Поиск клиентов'
+      name: 'Имя'
+      email: 'Почта'
+      comment: 'Комментарий'
+      find: 'Поиск'
+      text_filed: 'Можете оставить пустым'
+      comment_field: 'Введите слово или фразу содержащуюся в нужном комментарии. Или оставте пустым'
+      on_header: 'На главную'

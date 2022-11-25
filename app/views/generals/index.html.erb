@@ -1,0 +1,12 @@
+<div class = 'g_head'><%= t('.head') %></div>
+<p>
+<p>
+<%= button_to t('.new_client'), new_client_path, method: :get,
+      class:"botr", params: { lang: I18n.locale } %>
+<%= button_to t('.find_clients'), find_path, method: :get,
+      class:"botr", params: { lang: I18n.locale } %>
+<a href="clients/find" class="botr"><%= t('.find_clients') %></a>
+<a href="clients/index" class="botr"><%= t('.clients') %></a>
+<a href="#" class="botr"><%= t('.find_keys') %></a>
+<a href="#" class="botr"><%= t('.keys') %></a>
+

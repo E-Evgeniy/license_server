@@ -1,0 +1,45 @@
+<div class = 'show_client'>
+  <h2 class = 'page_header'><%= t('.header') + ' ' + @client.name %></h2>
+
+  <table class="client_table">
+    <col width="300">
+    <col width="250">
+    <col width="350">
+    <col width="150">
+    <col width="150">
+    <tr>
+      <th class = 'th_table_show_head'><%=t('.email')%></th>
+      <th class = 'th_table_show_head'><%= t('.comment') %></th>
+      <th class = 'th_table_show_head'><%= t('.reg_data') %></th>
+      <th class = 'th_table_show_head'><%= t('.active keys') %></th>
+      <th class = 'th_table_show_head'><%= t('.all_keys') %></th>
+    </tr>
+    <td class = 'th_table_show'><%= @client.email %></td>
+    <td class = 'th_table_show'><%= @client.comment %></td>
+    <td class = 'th_table_show'><%= @client.created_at %></td>
+    <td class = 'th_table_show'><%= @client.product_keys.where(status: true).count %></td>
+    <td class = 'th_table_show'><%= @client.product_keys.count %></td>
+    <tr>
+      <td class = 'th_table_show_footer' colspan = '5'></td>
+    </tr>
+  </table>
+
+  <div class = 'button_client_show_block'>
+    <%= button_to t('.new_key'), new_product_key_path, method: :get,
+      class:"button_client_show_new_key", params: { lang: I18n.locale, client_id: @client.id } %>
+    
+    <% if ProductKey.where(client_id: nil).where(status: true).exists? %>
+    <%= button_to t('.give_key'), new_client_path, method: :get,
+      class:"button_client_show_get_key", params: { lang: I18n.locale } %>
+    <% end %>
+
+    <%= button_to t('.edit_client'), new_client_path, method: :get,
+      class:"button_client_show_edit", params: { lang: I18n.locale } %>
+
+    <%= button_to t('.delete_client'), new_client_path, method: :get,
+      class:"button_client_show_delete", params: { lang: I18n.locale } %>
+  </div>
+
+</div>
+
+

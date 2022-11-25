@@ -31,3 +31,69 @@
 
 en:
   hello: "Hello world"
+
+  product_keys:
+    added_keys:
+      header: 'For the client'
+
+    new:
+      on_header: ' To the main'
+      header: 'Creating a new key for'
+
+    form:
+      create: 'Create'
+      volume_keys_filed: 'Enter a positive integer'
+      volume_keys: 'Number of licenses required'
+      volume_days: 'License validity period in days'
+      comment_filed: 'If necessary, enter a comment for the key'
+      comment: 'Comment'
+      key_type: 'Select the key type'
+      infinite_key: 'Select true if you want to make the key perpetual'
+
+  generals:
+    index:
+      keys: 'Keys'
+      head: 'License server'
+      clients: 'Clients'
+      new_client: 'New client'
+      find_clients: 'Find clients'
+      find_keys: 'Find keys'
+
+  clients:
+    show:
+      header: 'Client'
+      email: 'Email'
+      comment: 'Comment'
+      reg_data: 'Date of registration'
+      active keys: 'Number of active keys'
+      all_keys: 'Total keys'
+      new_key: 'Add a new key'
+      give_key: 'Give a free key'
+      edit_client: 'Edit the client'
+      delete_client: 'Delete a client'
+      on_header: ' To the main'
+
+    new:
+      on_header: ' To the main'
+      header: 'Creating a new client'
+
+    form:
+      create: 'Create'
+    
+    find:
+      header: 'Find clients'
+      name: 'Name'
+      email: 'Email'
+      comment: 'Comment'
+      find: 'Find'
+      text_filed: 'You can leave it empty'
+      comment_field: 'Enter the word or phrase contained in the desired comment. Or leave it empty'
+      
+  shared:
+    nav:
+      logout: 'Logout'
+      welcome: 'Welcome'
+      login: 'Log in'
+      sign_up: 'Sign up'
+      lang: 'Русская версия'
+      on_header: ' To the main'

@@ -1,0 +1,121 @@
+// Place all the styles related to the Clients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+  .page_header {
+    margin-top: -30px;
+    font-family: 'Dosis', sans;
+    font-size: 35px;
+    text-align:center;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .form {
+    display: flex;
+    align-self: center;
+    padding-top:40px;
+  }
+
+  .nav_and_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .bot_action {
+    float: left;
+    background:#fff;
+    width:150px;
+    display:block;
+    height:18px;
+    padding-top:19px;
+    border:1px solid #000;
+    margin: 20px auto;
+    font-family: 'Dosis', sans;
+    font-size: 12px;
+    font-weight:200;
+    color:#000;
+    text-transform:uppercase;
+    text-decoration:none;
+    text-align:center;
+    opacity:.8;
+    letter-spacing: 1px;
+  }
+
+  .but_form {
+    float: left;
+    background:rgb(238, 236, 236);
+    width:200px;
+    height:33px;
+    font-family: 'Dosis', sans;
+    letter-spacing: 1px;
+    text-transform:uppercase;
+    border:1px solid #000;
+    margin-top: 20px;
+    cursor: pointer;
+    -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+     -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+       -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+          transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450); /* linear */
+  }
+
+  .but_form:hover {
+    float: left;
+    background:rgb(255, 254, 254);
+    width:200px;
+    height:33px;
+    font-family: 'Dosis', sans;
+    letter-spacing: 4px;
+    text-transform:uppercase;
+    border:1px solid teal;
+    margin-top: 20px;
+    cursor: pointer;
+    -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+     -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+       -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+          transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450); /* linear */
+  }
+
+  .text_field_comment {
+    width: 200px;
+    height: 110px;
+    margin-top: 5px;
+    border:1px solid #000;
+    font-family: 'Dosis', sans;
+ }
+
+ .text_field_email {
+  font-family: 'Dosis', sans;
+  width: 200px;
+  margin-top: 5px;
+ }
+
+ .text_field_name {
+  font-family: 'Dosis', sans;
+  width: 200px;
+  margin-top: 5px;
+ }
+
+ .field_description {
+  font-family: 'Dosis', sans;
+  letter-spacing: 1px;
+  font-size: 16px;
+ }
+
+ .block_navigate{
+    margin-left: 20px;
+ }
+
+ .find_form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative; 
+ }
+
+ .form_field_email {
+  display: flex;
+    align-self: center;
+ }
