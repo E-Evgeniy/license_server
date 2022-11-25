@@ -6,7 +6,7 @@ class CreateProductKeys < ActiveRecord::Migration[6.1]
       t.string :ip
       t.string :status
       t.string :comment
-      t.string :type
+      t.boolean :infinite_period
       t.references :product, foreign_key: true
 
       t.timestamps

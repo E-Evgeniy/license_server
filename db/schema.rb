@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_24_150616) do
+ActiveRecord::Schema.define(version: 2022_11_24_103906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,15 +35,15 @@ ActiveRecord::Schema.define(version: 2022_11_24_150616) do
     t.integer "duration"
     t.string "ip"
     t.string "comment"
+    t.boolean "infinite_period"
     t.bigint "product_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "client_id"
     t.boolean "status"
-    t.bigint "key_types_id"
-    t.boolean "key_types"
+    t.bigint "key_type_id"
     t.index ["client_id"], name: "index_product_keys_on_client_id"
-    t.index ["key_types_id"], name: "index_product_keys_on_key_types_id"
+    t.index ["key_type_id"], name: "index_product_keys_on_key_type_id"
     t.index ["product_id"], name: "index_product_keys_on_product_id"
   end
 
@@ -70,6 +70,6 @@ ActiveRecord::Schema.define(version: 2022_11_24_150616) do
   end
 
   add_foreign_key "product_keys", "clients"
-  add_foreign_key "product_keys", "key_types", column: "key_types_id"
+  add_foreign_key "product_keys", "key_types"
   add_foreign_key "product_keys", "products"
 end
