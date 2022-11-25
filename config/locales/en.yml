@@ -48,6 +48,7 @@ en:
       comment_filed: 'If necessary, enter a comment for the key'
       comment: 'Comment'
       key_type: 'Select the key type'
+      infinite_key: 'Select true if you want to make the key perpetual'
 
   generals:
     index:
