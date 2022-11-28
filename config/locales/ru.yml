@@ -1,4 +1,8 @@
 ru:
+  actions_with_clients:
+    added_keys:
+      header: 'Добавленные ключи для'
+
   product_keys:
     show:
       header: 'Ключ'

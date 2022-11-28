@@ -1,13 +1,14 @@
 class ActionsWithClientsController < ApplicationController
 
   def added_keys
-    new_keys = []
+    @new_keys = []
     number_keys = params[:number_keys].to_i.abs
     number_days = params[:number_days].to_i.abs
 
     return unless number_keys.positive? && (number_days.positive? || params[:infinite_key])
 
-    @new_keys = create_keys(params, new_keys, number_keys, number_days)
+    @new_keys << create_keys(params, @new_keys, number_keys, number_days)
+
   end
 
   def create_keys(params, new_keys, number_keys, number_days)

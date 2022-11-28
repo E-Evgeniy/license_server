@@ -1,5 +1,53 @@
 <div class = 'added_keys'>
   <h2 class = 'page_header'><%= t('.header')%></h2>
-   <%= @new_keys %> 
+  <h3 class = 'page_header'><%= @new_keys[0].client.name %></h2>
+
+  <table class="client_table">
+    <col width="250">
+    <col width="150">
+    <col width="220">
+    <col width="150">
+    <col width="100">
+    <col width="150">
+    <tr>
+      <th class = 'th_table_show_head'><%=t('.name')%></th>
+      <th class = 'th_table_show_head'><%= t('.duration') %></th>
+      <th class = 'th_table_show_head'><%= t('.comment') %></th>
+      <th class = 'th_table_show_head'><%= t('.infinite_period') %></th>
+      <th class = 'th_table_show_head'><%= t('.key_type_id') %></th>
+      <th class = 'th_table_show_head'><%= t('.created_at') %></th>
+    </tr>
+    
+    <% for key in @new_keys do %>
+      <% if key.class != @new_keys.last.class %>
+        <tr>
+        <td class = 'th_table_show'><%= key.name %></td>
+
+        <% if key.infinite_period %>
+  td class = 'th_table_show_true'><%= t('.not_limited') %></td>
+<% else %>
+   <td class = 'th_table_show'><%= key.duration %></td>
+<% end %>
+
+<td class = 'th_table_show'><%= key.comment %></td>
+
+<% if key.infinite_period %>
+  <td class = 'th_table_show_true'><%= t('.active') %></td>
+<% else %>
+  <td class = 'th_table_show_false'><%= t('.not_active') %></td>
+<% end %>
+
+<td class = 'th_table_show'><%= key.key_type.name %></td>
+<td class = 'th_table_show'><%= key.created_at.to_s[0..9] %></td>
+</tr>
+      <% end %>
+    <% end %>
+    
+    
+    <tr>
+      <td class = 'th_table_show_footer' colspan = '6'></td>
+    </tr>
+  </table>
+
 
 </div>

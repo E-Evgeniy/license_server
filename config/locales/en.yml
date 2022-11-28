@@ -32,6 +32,17 @@
 en:
   hello: "Hello world"
 
+  actions_with_clients:
+    added_keys:
+      header: 'Added keys for'
+      name: 'Name'
+      duration: 'Days before deactivation of the key'
+      comment: 'Comment'
+      infinite_period: 'Infinite key validity period'
+      key_type_id: 'Key Type'
+      created_at: 'Key registration date'
+      not_limited: 'not limited'
+
   product_keys:
     show:
       header: 'Key'
