@@ -33,6 +33,25 @@ en:
   hello: "Hello world"
 
   product_keys:
+    show:
+      header: 'Key'
+      client: 'Client'
+      status: 'Key status'
+      name: 'Name'
+      duration: 'Days before deactivation of the key'
+      comment: 'Comment'
+      infinite_period: 'Infinite key validity period'
+      key_type_id: 'Key Type'
+      created_at: 'Key registration date'
+      active: 'active'
+      not_active: 'not active'
+      not_limited: 'not limited'
+      detach_the_client: 'detach the client'
+      edit_product_key: 'edit the key'
+      not_client: 'the key is not linked to the client'
+      delete_product_key: 'delete the key'
+      question_delete: 'Do you really want to delete this key?'
+
     added_keys:
       header: 'For the client'
 

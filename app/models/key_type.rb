@@ -2,6 +2,7 @@ class KeyType < ApplicationRecord
   has_many :product_keys
 
   def self.create_key_type
+    #KeyType.create_key_type
     KeyType.create(name: 'standart', comment: 'поддерживает ограничение по
            времени, требует проверки хеша на сервере лицензий при каждом
             запуске. Не поддерживает возможность работы с порталом через

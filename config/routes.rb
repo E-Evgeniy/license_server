@@ -10,6 +10,5 @@ Rails.application.routes.draw do
 
   get 'find', to: 'clients#find', as: :find
   get 'added_keys', to: 'actions_with_clients#added_keys', as: :added_keys
-
-  
+  get 'detach_client', to: 'product_keys#detach_client', as: :detach_client
 end
