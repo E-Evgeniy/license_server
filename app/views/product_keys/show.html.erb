@@ -1,4 +1,67 @@
 <div class = 'added_keys'>
-  <h2 class = 'page_header'>2222<%= t('.header')%></h2>
+  <h2 class = 'page_header'><%= t('.header')%></h2>
+   
+   <table class="client_table">
+    <col width="250">
+    <col width="150">
+    <col width="200">
+    <col width="150">
+    <col width="220">
+    <col width="150">
+    <col width="100">
+    <col width="150">
+    <tr>
+      <th class = 'th_table_show_head'><%=t('.client')%></th>
+      <th class = 'th_table_show_head'><%=t('.status')%></th>
+      <th class = 'th_table_show_head'><%=t('.name')%></th>
+      <th class = 'th_table_show_head'><%= t('.duration') %></th>
+      <th class = 'th_table_show_head'><%= t('.comment') %></th>
+      <th class = 'th_table_show_head'><%= t('.infinite_period') %></th>
+      <th class = 'th_table_show_head'><%= t('.key_type_id') %></th>
+      <th class = 'th_table_show_head'><%= t('.created_at') %></th>
+    </tr>
+    <% if @product_key.client.nil? %>
+      <td class = 'th_table_show_true'><%= t('.not_client') %></td>
+    <% else %>
+      <td class = 'th_table_show'><%= @product_key.client.name %></td>
+    <% end %>
+    
+    <% if @product_key.status %>
+      <td class = 'th_table_show_true'><%= t('.active') %></td>
+    <% else %>
+      <td class = 'th_table_show_false'><%= t('.not_ative') %></td>
+    <% end %>  
+
+    <td class = 'th_table_show'><%= @product_key.name %></td>
+
+    <% if @number_days == -1 %>
+      <td class = 'th_table_show_true'><%= t('.not_limited') %></td>
+    <% else %>
+      <td class = 'th_table_show'><%= @number_days %></td>
+    <% end %>
+
+    <td class = 'th_table_show'><%= @product_key.comment %></td>
+
+    <% if @product_key.infinite_period %>
+      <td class = 'th_table_show_true'><%= t('.active') %></td>
+    <% else %>
+      <td class = 'th_table_show_false'><%= t('.not_active') %></td>
+    <% end %>
+
+    <td class = 'th_table_show'><%= @product_key.key_type_id %></td>
+    <td class = 'th_table_show'><%= @product_key.created_at %></td>
+    <tr>
+      <td class = 'th_table_show_footer' colspan = '5'></td>
+    </tr>
+  </table>
+
+  <div class = 'button_client_show_block'>
+    <%= button_to t('.edit_product_key'), product_key_path(@product_key), method: :get,
+      class:"button_client_show_new_key", params: { lang: I18n.locale, id: @product_key.id } %>
+
+      <%= button_to t('.delete_product_key'), product_key_path(@product_key), method: :delete,
+      class:"button_client_show_new_key", params: { lang: I18n.locale, id: @product_key.id },
+      data: { confirm: t('.question_delete')} %>
+  </div>
 
 </div>

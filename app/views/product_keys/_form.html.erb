@@ -1,5 +1,5 @@
 <div class = 'form_new_key'>
-  <%= form_with url: "/added_keys", method: :get do |form| %>
+  <%= form_with url: "/create_keys", method: :get do |form| %>
     <%= form.label :number_keys, t('.volume_keys'), class: "lable_new_key_1"%><br>
     <%= form.number_field :number_keys, class: "field_new_key_1", placeholder: t('.volume_keys_filed')%>
     <p>
@@ -28,7 +28,7 @@
     </div>
     <p>
 
-    <%= button_to t('.create'), added_keys_path, method: :get, class:"but_form_new_key", params: { lang: I18n.locale,
+    <%= button_to t('.create'), create_keys_path, method: :get, class:"but_form_new_key", params: { lang: I18n.locale,
             client_id: @client_id } %>
   <% end %>
 </div>

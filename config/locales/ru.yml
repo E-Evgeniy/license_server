@@ -1,8 +1,41 @@
 ru:
+  actions_with_clients:
+    added_keys:
+      header: 'Добавленные ключи для'
+      name: 'Имя'
+      duration: 'Дней до дезактивации ключа'
+      comment: 'Комментарий'
+      infinite_period: 'Бесконечный срок действия ключа'
+      key_type_id: 'Тип ключа'
+      created_at: 'Дата регистрации ключа'
+      not_limited: 'не ограничен'
+      to_client: 'вернуться к клиенту'
+      to_main: 'На главную'
+
   product_keys:
+    show:
+      header: 'Ключ'
+      client: 'Клиент'
+      status: 'Статус ключа'
+      name: 'Имя'
+      duration: 'Дней до дезактивации ключа'
+      comment: 'Комментарий'
+      infinite_period: 'Бесконечный срок действия ключа'
+      key_type_id: 'Тип ключа'
+      created_at: 'Дата регистрации ключа'
+      active: 'активен'
+      not_active: 'не активен'
+      not_client: 'ключ не привязан к клиенту'
+      not_limited: 'не ограничен'
+      detach_the_client: 'открепить клиента'
+      edit_product_key: 'редактировать ключ'
+      delete_product_key: 'удалить ключ'
+      question_delete: 'Вы действительно хотите удалить этот ключ?'
+
+
     added_keys:
       header: 'Для клиента'
-
+      
     new:
       on_header: 'На главную'
       header: 'Создание нового ключа для'

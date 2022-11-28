@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   validates :name, presence: true
 
   def self.begin_data
+    #Product.begin_data
     Product.create(name: 'LeoVR')
     Client.create(name: 'Admin', email: 'admin@yax.ru', comment: 'this is user is admin')
     Client.create(name: 'Manager_1', email: 'manager_1@yax.ru', comment: 'this is user is manager')
@@ -17,6 +18,4 @@ class Product < ApplicationRecord
     # ProductKey.create(name: 'XsczGFQH', duration: 10, key_type: 'standart', product_id: 1, client_id: 3, status: true, comment: 'Key for Manager 2')
     # ProductKey.create(name: 'XtyGFQH', duration: 10, key_type: 'portal', product_id: 1, client_id: 4, status: true, comment: "Client_1's key")
   end
-
-  
 end
