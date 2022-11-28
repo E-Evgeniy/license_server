@@ -32,7 +32,7 @@
 en:
   hello: "Hello world"
 
-  actions_with_clients:
+  added_keys:
     added_keys:
       header: 'Added keys for'
       name: 'Name'
@@ -42,6 +42,8 @@ en:
       key_type_id: 'Key Type'
       created_at: 'Key registration date'
       not_limited: 'not limited'
+      to_client: 'return to client'
+      to_main: ' To the main'
 
   product_keys:
     show:

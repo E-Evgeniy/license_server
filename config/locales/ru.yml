@@ -2,6 +2,15 @@ ru:
   actions_with_clients:
     added_keys:
       header: 'Добавленные ключи для'
+      name: 'Имя'
+      duration: 'Дней до дезактивации ключа'
+      comment: 'Комментарий'
+      infinite_period: 'Бесконечный срок действия ключа'
+      key_type_id: 'Тип ключа'
+      created_at: 'Дата регистрации ключа'
+      not_limited: 'не ограничен'
+      to_client: 'вернуться к клиенту'
+      to_main: 'На главную'
 
   product_keys:
     show:
