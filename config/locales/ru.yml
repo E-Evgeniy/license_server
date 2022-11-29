@@ -1,7 +1,13 @@
 ru:
   key_types:
+    form:
+      create: 'Создать'
+      name: 'Тип ключа'
+      comment: 'Комментарий'
+
     new:
       header: 'Создание нового типа ключа'
+      to_main: 'На главную'
 
     index:
       header: 'Типы ключей'

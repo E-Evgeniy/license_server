@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.edit {
+   text-decoration: none;
+}
+
+.th_table_show_comment {
+   border: 1px solid rgb(0, 0, 0);
+   border-collapse: collapse;
+   background:rgb(255, 255, 255);
+   font-family: 'Dosis', sans;
+   font-size: 16px;
+   letter-spacing: 1px;
+   padding: 10px;
+}
+
 .th_table_show_edit {
     border: 1px solid rgb(0, 0, 0);
     border-collapse: collapse;
@@ -19,7 +33,10 @@
     font-family: 'Dosis', sans;
     font-size: 16px;
     letter-spacing: 1px;
-    text-decoration: underline;
+    -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+         transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
  }
 
  .th_table_show_delete {
@@ -40,4 +57,12 @@
     font-size: 16px;
     letter-spacing: 1px;
     text-decoration: underline;
+    -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+         transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+ }
+
+ .but_new_key_type {
+   padding-top: 30px;
  }

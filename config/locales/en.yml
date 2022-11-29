@@ -33,8 +33,14 @@ en:
   hello: "Hello world"
 
   key_types:
+    form:
+      create: 'Create'
+      name: 'Type of key'
+      comment: 'Comment'
+
     new:
       header: 'Creating a new key type'
+      to_main: ' To the main'
 
     index:
       header: 'Types of keys'
