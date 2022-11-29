@@ -1,0 +1,10 @@
+<%= form_with model: @key_type, local: true do |form| %>
+  <%= form.label :name, class: 'field_description' %><br>
+  <%= form.text_area :name, id: :key_type_name, class: 'text_field_name' %>
+  <p>
+  <%= form.label :comment, class: 'field_description' %><br>
+  <%= form.text_field :comment, id: :key_type_email, class: 'text_field_email' %>
+  <p>
+  <%= form.submit t('.create'), class: 'but_form', params: { lang: I18n.locale } %>
+  <p>
+<% end %>

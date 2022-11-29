@@ -32,6 +32,19 @@
 en:
   hello: "Hello world"
 
+  key_types:
+    new:
+      header: 'Creating a new key type'
+
+    index:
+      header: 'Types of keys'
+      question_delete: 'Do you really want to delete this type of key?'
+      name: ' Type of key'
+      comment: 'Comment'
+      delete_key_type: 'Action'
+      delete: 'Delete'
+      new_key_type: 'Create a new type'     
+
   added_keys:
     added_keys:
       header: 'Added keys for'
@@ -90,6 +103,7 @@ en:
       new_client: 'New client'
       find_clients: 'Find clients'
       find_keys: 'Find keys'
+      types_of_keys: 'Types of keys'
 
   clients:
     show:

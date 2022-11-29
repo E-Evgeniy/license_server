@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   resources :clients
   resources :product_keys
 
-  resources :actions_with_clients
-
+  resources :key_types
   root to: 'generals#index'
 
   get 'find', to: 'clients#find', as: :find

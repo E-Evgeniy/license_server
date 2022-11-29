@@ -1,5 +1,6 @@
 class KeyType < ApplicationRecord
   has_many :product_keys
+  validates :name, :comment, presence: true
 
   def self.create_key_type
     #KeyType.create_key_type
