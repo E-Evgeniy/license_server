@@ -1,4 +1,13 @@
 ru:
+  activerecord:
+    errors:
+      models:
+        key_type:
+          attributes:
+            name: 
+              blank: 'Поле Тип ключа не должно быть пустым'
+            comment:
+              blank: 'Поле Комментарий не должно быть пустым'
   key_types:
     form:
       create: 'Создать'
