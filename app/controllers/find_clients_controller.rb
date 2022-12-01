@@ -4,8 +4,11 @@ class FindClientsController < ApplicationController
   def result_client
 
     params.each do |x, y|
-        puts('x',x)
-        puts('y',y)
+        if x != 'lang'
+           if x == 'data_begin' || x == 'data_end'
+           else
+           end
+        end    
     end    
     
     # if !params[:name].empty?
