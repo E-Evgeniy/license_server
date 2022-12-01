@@ -1,15 +1,13 @@
 class ClientsController < ApplicationController
-  #validates_format_of :email, :with => /.+@.+\..+/i   #/@/
-
-  before_action :load_client, only: %i[show edit update destroy]
+  # validates_format_of :email, :with => /.+@.+\..+/i   #/@/
+  before_action :load_client, only: %i[show destroy]
 
   def new
     @client = Client.new
-    
   end
 
   def create
-    @client = Client.new
+    @client = Client.new(client_params)
 
     if @client.save
       redirect_to @client
@@ -26,6 +24,11 @@ class ClientsController < ApplicationController
   end
 
   def result
+  end
+
+  def destroy
+    @client.destroy
+    redirect_to clients_path
   end
 
   private

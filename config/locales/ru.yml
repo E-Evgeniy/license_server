@@ -1,4 +1,32 @@
 ru:
+  activerecord:
+    errors:
+      models:
+        key_type:
+          attributes:
+            name: 
+              blank: 'Поле Тип ключа не должно быть пустым'
+            comment:
+              blank: 'Поле Комментарий не должно быть пустым'
+  key_types:
+    form:
+      create: 'Создать'
+      name: 'Тип ключа'
+      comment: 'Комментарий'
+
+    new:
+      header: 'Создание нового типа ключа'
+      to_main: 'На главную'
+
+    index:
+      header: 'Типы ключей'
+      question_delete: 'Вы действительно хотите удалить этот тип ключа?'
+      name: 'Тип ключа'
+      comment: 'Комментарий'
+      delete_key_type: 'Действие'
+      delete: 'Удалить'
+      new_key_type: 'Создать новый тип'
+
   actions_with_clients:
     added_keys:
       header: 'Добавленные ключи для'
@@ -10,7 +38,7 @@ ru:
       created_at: 'Дата регистрации ключа'
       not_limited: 'не ограничен'
       to_client: 'вернуться к клиенту'
-      to_main: 'На главную'
+      to_main: 'На главную'         
 
   product_keys:
     show:
@@ -58,6 +86,7 @@ ru:
       new_client: 'Новый клиент'
       find_clients: 'Поиск клиентов'
       find_keys: 'Поиск ключей'
+      types_of_keys: 'Типы ключей'
   
   shared:
     nav:

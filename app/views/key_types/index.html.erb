@@ -1,0 +1,46 @@
+<div class = 'index_key_types'>
+  <h2 class = 'page_header'><%= t('.header')%></h2>
+
+  <div class = 'block_navigate'>
+      <a href="/" class="nav_botr"><%= t('.to_main') %></a>
+    </div>
+
+  <div class = 'indent'>
+  <table class="client_table">
+    <col width="50">
+    <col width="250">
+    <col width="750">
+    <col width="220">
+    <tr>
+      <th class = 'th_table_show_head'>№</th>
+      <th class = 'th_table_show_head'><%=t('.name')%></th>
+      <th class = 'th_table_show_head'><%= t('.comment') %></th>
+      <th class = 'th_table_show_head'><%= t('.delete_key_type') %></th>
+
+    </tr>
+    <% i = 1 %>
+    <% @key_types.each do |type| %>
+      <tr>
+        <td class = 'th_table_show'><%= i %></td>
+        <td class = 'th_table_show_edit'> <%=link_to type.name, edit_key_type_path(type) %> </td>
+        <td class = 'th_table_show_comment'><%= type.comment %></td>
+        <td class = 'th_table_show_delete'> <%= link_to t('.delete'),
+                key_type_path(type),
+                method: :delete,
+                data: { confirm: t('.question_delete')} %>
+          </td>
+        <% i += 1 %>
+      </tr>      
+    <% end %>
+    
+    <tr>
+      <td class = 'th_table_show_footer' colspan = '4'></td>
+    </tr>
+  </table>
+  </div>
+
+  <div class = 'but_new_key_type'>
+  <%= button_to t('.new_key_type'), new_key_type_path, method: :get,
+      class:"button_client_show_new_key", params: { lang: I18n.locale } %>
+  </div>
+</div>

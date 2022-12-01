@@ -1,0 +1,12 @@
+
+
+<% if resource&.errors.present? %><br/>
+<b><%= "#{resource.errors.count} error(s) detected: " %>
+</b>
+<ul>
+  <% resource.errors.full_messages.each do |message|
+ %>
+  <li><%= message %>
+  </li>
+<% end %></ul>
+<% end %>
