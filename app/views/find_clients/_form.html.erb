@@ -1,0 +1,23 @@
+<div, class = "text_field_email">
+<%= form_with url: "result_client", method: :get do |form| %>
+  <%= form.label t('.name'), class: 'field_description' %><br>
+  <%= form.text_area :name, id: :key_type_name, class: 'text_field_type' %>
+  <p>
+  <%= form.label :email, class: 'field_description' %><br>
+  <%= form.text_field :email, id: :client_email, class: 'text_field_email' %>
+  <p>
+  <%= form.label :comment, class: 'field_description' %><br>
+  <%= form.text_area :comment, id: :client_comment, class: 'text_field_comment' %>
+  <p>
+  <b><%= t('.period_registration')%></b>
+  <p>
+  <p>
+  <%= form.label :data_begin, t('.data_begin'), class: "text_field_email"%><br>
+  <%= form.date_field :data_begin, class: "text_field_type"%>
+  <p>
+  <%= form.label :data_end, t('.data_end'), class: "text_field_email"%><br>
+  <%= form.date_field :data_end, class: "text_field_type"%>
+  <p>
+  <%= button_to t('.find'), result_client_path, method: :get, class:"button_form_new_type", params: { lang: I18n.locale } %>
+ <% end %>
+ </div>

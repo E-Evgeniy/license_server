@@ -1,4 +1,20 @@
 ru:
+  find_clients:
+    result_client:
+      header: 'Результаты поиска клиента'
+
+    form:
+      name: 'Имя'
+      email: 'Почта'
+      comment: 'Комментарий'
+      find: 'Найти'
+      data_begin: 'Начало периода'
+      data_end: 'Конец периода'
+      period_registration: 'Период регистрации:'
+
+    find_client:
+      header: 'Поиск клиентов'
+
   activerecord:
     errors:
       models:

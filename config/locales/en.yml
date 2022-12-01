@@ -30,7 +30,21 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  find_clients:
+    result_client:
+      header: 'Customer search results'
+
+    find_client:
+      header: 'Customer search'
+
+    form:
+      name: 'Name'
+      email: 'Email'
+      comment: 'Comment'
+      find: 'Find'
+      data_begin: 'Beginning of the period'
+      data_end: 'End of the period'
+      period_registration: 'Registration period:'
 
   key_types:
     form:

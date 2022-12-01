@@ -8,7 +8,7 @@ module ProductKeysHelper
   end
 
   def self.analiz_work_days(key_obj)
-    delta_time = Time.current - key_obj.created_at
+    delta_time = key_obj.created_at - Time.current
     if delta_time <= 0
       0
     else
