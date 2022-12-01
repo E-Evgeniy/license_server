@@ -5,6 +5,7 @@
       <a href="/" class="nav_botr"><%= t('.to_main') %></a>
     </div>
 
+  <div class = 'indent'>
   <table class="client_table">
     <col width="50">
     <col width="250">
@@ -36,6 +37,7 @@
       <td class = 'th_table_show_footer' colspan = '4'></td>
     </tr>
   </table>
+  </div>
 
   <div class = 'but_new_key_type'>
   <%= button_to t('.new_key_type'), new_key_type_path, method: :get,
