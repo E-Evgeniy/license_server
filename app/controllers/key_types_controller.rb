@@ -10,11 +10,11 @@ class KeyTypesController < ApplicationController
 
   def show; end
 
-  def edit; end
-
   def new
     @key_type = KeyType.new
   end
+
+  def edit; end
 
   def create
     @key_type = KeyType.new(key_type_params)
