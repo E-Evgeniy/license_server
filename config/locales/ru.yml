@@ -3,6 +3,8 @@ ru:
     result_client:
       header: 'Результаты поиска клиента'
       to_main: 'На главную'
+      not_find: 'Ничего не найдено :('
+      find_again: 'Поискать снова'
 
     form:
       name: 'Имя'

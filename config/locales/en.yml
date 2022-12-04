@@ -34,6 +34,8 @@ en:
     result_client:
       header: 'Customer search results'
       to_main: ' To the main'
+      not_find: 'Nothing found :('
+      find_again: 'Search again'
 
     find_client:
       header: 'Customer search'

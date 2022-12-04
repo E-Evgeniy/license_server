@@ -4,8 +4,40 @@
     <div class = 'block_navigate'>
       <a href="/" class="nav_botr"><%= t('.to_main') %></a>
     </div>
-    <div class = 'form'>      
-      <%= render 'form' %>
-    </div>
+
+    <% if @client.nil? %>
+      <div class = 'not_find' >
+        <%= t('.not_find') %> 
+        <p>
+        <p>
+        <%= button_to t('.find_again'), find_client_path, method: :get,
+        class:"button_find_clients_again", params: { lang: I18n.locale } %>
+      </div>  
+    <% else %>  
+      <table class="client_table">
+        <col width="300">
+        <col width="250">
+        <col width="350">
+        <col width="150">
+        <col width="150">
+        <col width="150">
+        <col width="150">
+        <col width="150">
+        <tr>
+          <th class = 'th_table_show_head'><%=t('.name')%></th>
+          <th class = 'th_table_show_head'><%=t('.email')%></th>
+          <th class = 'th_table_show_head'><%= t('.comment') %></th>
+          <th class = 'th_table_show_head'><%= t('.reg_data') %></th>
+          <th class = 'th_table_show_head'><%= t('.active keys') %></th>
+          <th class = 'th_table_show_head'><%= t('.all_keys') %></th>
+          <th colspan="2" class = 'th_table_show_head'><%= t('.actions') %></th>
+        </tr>
+        <% i = 1 %>
+        <% @clients.each do |client| %>
+          
+        <% end %>
+      </table>
+    <% end %>  
+
    </div>
  </div>

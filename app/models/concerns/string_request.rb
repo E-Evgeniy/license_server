@@ -7,12 +7,12 @@ module StringRequest
 
     return if s_date.nil?
 
-     s_parametrs = find_parametrs(params)
-    "SELECT * FROM #{obj.downcase}s WHERE #{s_date} #{s_parametrs}"
+    s_parametrs = find_parametrs(params)
+    "#{s_date} #{s_parametrs}"
   end
 
   def self.find_parametrs(params)
-    result = {}
+    result = ''
     params.each do |key, value|
       result = "#{result} AND #{key} LIKE '%#{value}%'" unless check_params(key, value)
     end
