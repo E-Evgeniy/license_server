@@ -33,9 +33,11 @@ en:
   find_clients:
     result_client:
       header: 'Customer search results'
+      to_main: ' To the main'
 
     find_client:
       header: 'Customer search'
+      to_main: ' To the main'
 
     form:
       name: 'Name'

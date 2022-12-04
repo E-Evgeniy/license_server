@@ -2,6 +2,7 @@ ru:
   find_clients:
     result_client:
       header: 'Результаты поиска клиента'
+      to_main: 'На главную'
 
     form:
       name: 'Имя'
@@ -14,6 +15,7 @@ ru:
 
     find_client:
       header: 'Поиск клиентов'
+      to_main: 'На главную'
 
   activerecord:
     errors:

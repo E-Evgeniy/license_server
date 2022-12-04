@@ -3,10 +3,10 @@
   <%= form.label t('.name'), class: 'field_description' %><br>
   <%= form.text_area :name, id: :key_type_name, class: 'text_field_type' %>
   <p>
-  <%= form.label :email, class: 'field_description' %><br>
+  <%= form.label t('.email'), class: 'field_description' %><br>
   <%= form.text_field :email, id: :client_email, class: 'text_field_email' %>
   <p>
-  <%= form.label :comment, class: 'field_description' %><br>
+  <%= form.label t('.comment'), class: 'field_description' %><br>
   <%= form.text_area :comment, id: :client_comment, class: 'text_field_comment' %>
   <p>
   <b><%= t('.period_registration')%></b>
