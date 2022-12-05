@@ -27,12 +27,12 @@ module StringRequest
   def self.find_begin_end(data_begin, data_end, obj)
     return if eval("#{obj}.all.empty?")
 
-    "created_at between '#{find_date(data_begin, obj, 'asc')}' and '#{find_date(data_end, obj, 'desc')}'"
+    "created_at between '#{find_date(data_begin, obj, 'asc', 0)}' and '#{find_date(data_end, obj, 'desc', 10)}'"
   end
 
-  def self.find_date(data_time, obj, sort)
+  def self.find_date(data_time, obj, sort, dt)
     if data_time.empty?
-      eval("#{obj}.order(created_at: :#{sort}).first.created_at").to_s
+      eval("#{obj}.order(created_at: :#{sort}).first.created_at + dt").to_s
     else
       data_time
     end

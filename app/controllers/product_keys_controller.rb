@@ -20,10 +20,6 @@ class ProductKeysController < ApplicationController
 
   def load_product_key
     @product_key = ProductKey.find(params[:id])
-    @number_days = ProductKeysHelper.working_days(@product_key)
-    if @number_days.zero?
-      @product_key.status = false
-      @product_key.save
-    end
+    @number_days = CheckKey.working_days(@product_key)
   end
 end

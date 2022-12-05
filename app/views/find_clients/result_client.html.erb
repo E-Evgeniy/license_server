@@ -4,8 +4,7 @@
     <div class = 'block_navigate'>
       <a href="/" class="nav_botr"><%= t('.to_main') %></a>
     </div>
-
-    <% if @client.nil? %>
+    <% if @clients[0].nil? %>
       <div class = 'not_find' >
         <%= t('.not_find') %> 
         <p>
@@ -14,16 +13,18 @@
         class:"button_find_clients_again", params: { lang: I18n.locale } %>
       </div>  
     <% else %>  
-      <table class="client_table">
-        <col width="300">
+      <table class="client_table_find">
+        <col width="50">
+        <col width="200">
+        <col width="200">
         <col width="250">
-        <col width="350">
         <col width="150">
         <col width="150">
         <col width="150">
-        <col width="150">
-        <col width="150">
+        <col width="100">
+        <col width="100">
         <tr>
+          <th class = 'th_table_show_head'><%= '№' %></th>
           <th class = 'th_table_show_head'><%=t('.name')%></th>
           <th class = 'th_table_show_head'><%=t('.email')%></th>
           <th class = 'th_table_show_head'><%= t('.comment') %></th>
@@ -34,9 +35,35 @@
         </tr>
         <% i = 1 %>
         <% @clients.each do |client| %>
-          
+          <tr>
+          <td class = 'th_table_show'><%= i %></td>
+          <td class = 'th_table_show'><%= link_to client.name, client_path(client) %></td>
+          <td class = 'th_table_show'><%= client.email %></td>
+          <td class = 'th_table_show'><%= client.comment %></td>
+          <td class = 'th_table_show'><%= client.created_at.to_s[0..9] %></td>
+          <% if  client.product_keys.nil? %>
+            <td class = 'th_table_show'>0</td>
+            <td class = 'th_table_show'>0</td>
+          <% else %>
+            <td class = 'th_table_show'><%= client.product_keys.where(status: true).count %></td>
+            <td class = 'th_table_show'><%= client.product_keys.count %></td>
+          <% end %>  
+            <td class = 'th_table_show'><%= link_to t('.edit'),
+                edit_client_path(client), data: { client_id: client.id}
+                 %></td>
+          <td class = 'th_table_show'> <%= link_to t('.delete'),
+                client_path(client),
+                method: :delete,
+                data: { confirm: 'Are you sure?'} %>
+          </td>
+        <% i += 1 %>
+      </tr>
         <% end %>
       </table>
+      <div class = 'after_find' >
+        <%= button_to t('.find_again'), find_client_path, method: :get,
+        class:"button_find_clients_again", params: { lang: I18n.locale } %>
+      </div>  
     <% end %>  
 
    </div>
