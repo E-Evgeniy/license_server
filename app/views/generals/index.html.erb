@@ -2,9 +2,9 @@
 <div class = 'block_navigation_general' >
 <%= button_to t('.new_client'), new_client_path, method: :get,
       class:"button_new_client", params: { lang: I18n.locale } %>
-<%= button_to t('.find_clients'), find_path, method: :get,
+<%= button_to t('.find_clients'), find_client_path, method: :get,
       class:"button_find_clients", params: { lang: I18n.locale } %>
-<%= button_to t('.find_keys'), find_path, method: :get,
+<%= button_to t('.find_keys'), find_client_path, method: :get,
       class:"button_find_keys", params: { lang: I18n.locale } %>
 <%= button_to t('.types_of_keys'), key_types_path, method: :get,
       class:"button_type_keys", params: { lang: I18n.locale } %>

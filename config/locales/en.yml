@@ -30,7 +30,29 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  find_clients:
+    result_client:
+      header: 'Customer search results'
+      to_main: ' To the main'
+      not_find: 'Nothing found :('
+      find_again: 'Search again'
+      name: 'Name'
+      email: 'Email'
+      comment: 'Comment'
+      reg_data: 'Date of registration'
+
+    find_client:
+      header: 'Customer search'
+      to_main: ' To the main'
+
+    form:
+      name: 'Name'
+      email: 'Email'
+      comment: 'Comment'
+      find: 'Find'
+      data_begin: 'Beginning of the period'
+      data_end: 'End of the period'
+      period_registration: 'Registration period:'
 
   key_types:
     form:
@@ -81,7 +103,7 @@ en:
       detach_the_client: 'detach the client'
       edit_product_key: 'edit the key'
       not_client: 'the key is not linked to the client'
-      delete_product_key: 'delete the key'
+      delete_product_reg_data: 'Date of registration'key: 'delete the key'
       question_delete: 'Do you really want to delete this key?'
 
     added_keys:

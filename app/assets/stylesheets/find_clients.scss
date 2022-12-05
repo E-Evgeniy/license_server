@@ -1,0 +1,70 @@
+.not_find {
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    font-family: 'Dosis', sans;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.after_find {
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
+  font-family: 'Dosis', sans;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.button_find_clients_again{
+    background:rgba(3, 26, 228, 0.137);
+    width:280px;
+    display:block;
+    height:55px;
+    align-self: center;
+    
+    border:1px solid #000;
+    margin: 20px auto;
+    margin-top: 70px;
+    font-family: 'Dosis', sans;
+    font-size: 18px;
+    font-weight:200;
+    color:#000;
+    text-transform:uppercase;
+    text-decoration:none;
+    text-align:center;
+    opacity:.8;
+    letter-spacing: 1px;
+      -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+       -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+          transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+  }
+  .button_find_clients_again:hover{
+    background:rgba(2, 11, 90, 0.479);
+    width:300px;
+    height:55px;
+    padding-top:1px;
+    border:2px solid teal;
+    margin: 20px auto;
+    margin-top: 70px;
+    font-weight: bold;
+    opacity:1;
+    letter-spacing: 4px;
+    -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+       -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+          transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+  }
+
+  .client_table_find { text-align: center;
+    padding: 10px 0;
+    font-size: 18px; 
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 50px;
+    overflow-wrap: break-word;
+    max-width: 1350px;
+    width: 100%;
+  }

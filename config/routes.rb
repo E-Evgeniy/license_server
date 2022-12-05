@@ -9,9 +9,11 @@ Rails.application.routes.draw do
   resources :key_types
   root to: 'generals#index'
 
-  get 'find', to: 'clients#find', as: :find
   get 'create_keys', to: 'actions_with_clients#create_keys', as: :create_keys
   get 'added_keys', to: 'added_keys#added_keys', as: :added_keys
-  
+
   get 'detach_client', to: 'product_keys#detach_client', as: :detach_client
+
+  get 'find_client', to: 'find_clients#find_client', as: :find_client
+  get 'result_client', to: 'find_clients#result_client', as: :result_client
 end
