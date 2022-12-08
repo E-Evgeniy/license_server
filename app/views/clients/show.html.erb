@@ -36,7 +36,7 @@
     <%= button_to t('.edit_client'), new_client_path, method: :get,
       class:"button_client_show_edit", params: { lang: I18n.locale } %>
 
-    <%= button_to t('.delete_client'), new_client_path, method: :get, data: { confirm: 'Are you sure?'},
+    <%= button_to t('.delete_client'), new_client_path, method: :delete, data: { confirm: 'Are you sure?'},
       class:"button_client_show_delete", params: { lang: I18n.locale } %>
   </div>
 
