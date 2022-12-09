@@ -30,7 +30,7 @@
 .form_new_key {
     display: flex;
     align-self: center;
-    padding-top:20px;
+    padding-top:40px;
 }
 
 .lable_new_key_1 {
@@ -62,9 +62,9 @@
 
 .but_form_new_key {
     float: left;
-    background:rgb(238, 236, 236);
+    background:rgba(5, 129, 36, 0.164);
     width:300px;
-    height:33px;
+    height:40px;
     font-family: 'Dosis', sans;
     letter-spacing: 1px;
     text-transform:uppercase;
@@ -80,9 +80,10 @@
     float: left;
     background:rgba(5, 129, 36, 0.562);
     width:300px;
-    height:33px;
+    height:40px;
     font-family: 'Dosis', sans;
     letter-spacing: 4px;
+    font-weight: bold;
     text-transform:uppercase;
     border:1px solid teal;
     cursor: pointer;
