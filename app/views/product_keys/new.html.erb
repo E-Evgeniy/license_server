@@ -1,9 +1,17 @@
 <div class = 'new_product_key'>
   <h2 class = 'page_header_new_key'><%= t('.header')%></h2>
+  <div class = 'block_navigate'>
+      <a href="/" class="nav_botr"><%= t('.on_header') %></a>
+  </div>
   <h3 class = 'page_header_new_key_client'><%= Client.find(@client_id).name %></h3>
   
+
+
   <div class = 'form_common'>
    <%= render 'form' %>
   </div>
 
+
 </div>
+
+  

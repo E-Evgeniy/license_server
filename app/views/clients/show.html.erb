@@ -1,6 +1,10 @@
 <div class = 'show_client'>
   <h2 class = 'page_header'><%= t('.header') + ' ' + @client.name %></h2>
 
+  <div class = 'block_navigate'>
+      <a href="/" class="nav_botr"><%= t('.on_header') %></a>
+   </div>
+
   <table class="client_table">
     <col width="300">
     <col width="250">
@@ -33,10 +37,10 @@
       class:"button_client_show_get_key", params: { lang: I18n.locale } %>
     <% end %>
 
-    <%= button_to t('.edit_client'), new_client_path, method: :get,
+    <%= button_to t('.edit_client'), edit_client_path, method: :get,
       class:"button_client_show_edit", params: { lang: I18n.locale } %>
 
-    <%= button_to t('.delete_client'), new_client_path, method: :delete, data: { confirm: 'Are you sure?'},
+    <%= button_to t('.delete_client'), client_path(@client), method: :delete, data: { confirm: 'Are you sure?'},
       class:"button_client_show_delete", params: { lang: I18n.locale } %>
   </div>
 

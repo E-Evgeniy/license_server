@@ -11,5 +11,7 @@
           <%= link_to t('.sign_up'), new_user_registration_path %> |
         <% end %>
         <br> 
-        <%= link_to t('.lang'), request.path.to_s + '?lang=' + lang %>
+        <% if current_page?(root_path) %>
+          <%= link_to t('.lang'), request.path.to_s + '?lang=' + lang %>
+        <% end %>
 </p>

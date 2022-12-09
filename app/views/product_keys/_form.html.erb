@@ -20,12 +20,6 @@
       <%= f.collection_select :key_type_id, KeyType.order(:id), :id, :name, class: "field_new_key_2"%><br>
     <% end %>  
 
-    <div class = 'key_type_description'>
-      <% KeyType.all.each do |kt| %>
-        <b><%= kt.name %></b> - <%= kt.comment %>
-        <p>
-      <% end %>
-    </div>
     <p>
 
     <%= button_to t('.create'), create_keys_path, method: :get, class:"but_form_new_key", params: { lang: I18n.locale,
