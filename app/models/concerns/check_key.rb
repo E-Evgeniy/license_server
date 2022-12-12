@@ -22,7 +22,7 @@ module CheckKey
       key_obj.save
       0
     else
-      delta_time = key_obj.duration - (Time.current - key_obj.created_at)
+      delta_time = key_obj.duration * (60 * 60 * 24) - (Time.current - key_obj.created_at)
       calcilation_work_days(delta_time)
     end
   end

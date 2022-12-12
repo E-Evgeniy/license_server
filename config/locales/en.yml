@@ -30,6 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  client_keys:
+    client_keys:
+      header: 'Keys for'
+
   find_clients:
     result_client:
       header: 'Customer search results'
@@ -118,6 +122,16 @@ en:
       comment: 'Comment'
       key_type: 'Select the key type'
       infinite_key: 'Select true if you want to make the key perpetual'
+    
+    form_edit:
+      volume_days: 'License validity period in days'
+      client_id: 'Client_id'
+      created_at: 'Creation time'
+      status_key: 'Status key'
+      infinite_key: 'Select true if you want to make the key perpetual'
+      comment: 'Comment'
+      key_type: 'Select the key type'
+      update: 'Update'
 
   generals:
     index:

@@ -1,9 +1,12 @@
-<div class = 'added_keys'>
-  <% client = Client.find(@new_keys[0]["client_id"].to_i) %>
+<div class = 'client_keys'>
+  <% client = ProductKey.find(@client_keys[0]).client %>
   <h2 class = 'page_header'><%= t('.header')%></h2>
   <h3 class = 'added_keys_client'><%= client.name %></h3>
+  
+  <div class = 'block_navigate'>
+      <a href="/" class="nav_botr_ck"><%= t('.on_header') %></a>
 
-  <table class="table_with_added_keys">
+      <table class="table_with_added_keys">
     <col width="50">
     <col width="250">
     <col width="250">
@@ -21,28 +24,28 @@
       <th class = 'th_table_show_head'><%= t('.created_at') %></th>
     </tr>
     <% i = 1 %>
-    <% @new_keys.each do |key| %>
+    <% @client_keys.each do |key| %>
       <tr>
-        <% key_obj = ProductKey.find(key['id'].to_i) %>
+        <% key_obj = ProductKey.find(key.to_i) %>
         <td class = 'th_table_show'><%= i %></td>
-        <td class = 'th_table_show'><%= link_to key['name'], product_key_path(key_obj) %></td>
+        <td class = 'th_table_show'><%= link_to key_obj.name, product_key_path(key_obj) %></td>
 
-        <% if key['infinite_period'] %>
+        <% if key_obj.infinite_period %>
           <td class = 'th_table_show_true'><%= t('.not_limited') %></td>
         <% else %>
-          <td class = 'th_table_show'><%= key['duration'] %></td>
+          <td class = 'th_table_show'><%= CheckKey.working_days(key_obj) %></td>
         <% end %>
 
-        <td class = 'th_table_show'><%= key['comment'] %></td>
+        <td class = 'th_table_show'><%= key_obj.comment %></td>
 
-        <% if key['infinite_period'] %>
+        <% if key_obj.infinite_period %>
           <td class = 'th_table_show_true'><%= t('.active') %></td>
         <% else %>
           <td class = 'th_table_show_false'><%= t('.not_active') %></td>
         <% end %>
 
-        <td class = 'th_table_show'><%= KeyType.find(key['key_type_id'].to_i).name %></td>
-        <td class = 'th_table_show'><%= key['created_at'][0..9] %></td>
+        <td class = 'th_table_show'><%= KeyType.find(key_obj.key_type_id.to_i).name %></td>
+        <td class = 'th_table_show'><%= key_obj.created_at.to_s[0..9] %></td>
         <% i += 1 %>
       </tr>      
     <% end %>
@@ -51,12 +54,7 @@
       <td class = 'th_table_show_footer' colspan = '7'></td>
     </tr>
   </table>
-
-  <div class = 'button_client_show_block'>
-    <%= button_to t('.to_client'), client_path(client), method: :get,
-      class:"button_client_show_new_key", params: { lang: I18n.locale } %>
-  
-    <%= button_to t('.to_main'), root_path, method: :get,
-      class:"button_client_show_new_key", params: { lang: I18n.locale } %>
   </div>
+  
+  
 </div>

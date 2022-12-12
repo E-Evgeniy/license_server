@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'create_keys', to: 'actions_with_clients#create_keys', as: :create_keys
   get 'added_keys', to: 'added_keys#added_keys', as: :added_keys
+  get 'client_keys', to: 'client_keys#client_keys', as: :client_keys
 
   get 'detach_client', to: 'product_keys#detach_client', as: :detach_client
 

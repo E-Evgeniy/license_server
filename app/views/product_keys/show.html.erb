@@ -1,10 +1,14 @@
 <div class = 'added_keys'>
   <h2 class = 'page_header'><%= t('.header')%></h2>
+  
+  <div class = 'block_navigate'>
+      <a href="/" class="nav_botr"><%= t('.on_header') %></a>
+   </div>
    
    <table class="client_table">
-    <col width="250">
+    <col width="220">
     <col width="150">
-    <col width="200">
+    <col width="230">
     <col width="150">
     <col width="220">
     <col width="150">
@@ -48,15 +52,15 @@
       <td class = 'th_table_show_false'><%= t('.not_active') %></td>
     <% end %>
 
-    <td class = 'th_table_show'><%= @product_key.key_type_id %></td>
-    <td class = 'th_table_show'><%= @product_key.created_at %></td>
+    <td class = 'th_table_show'><%= @product_key.key_type.name %></td>
+    <td class = 'th_table_show'><%= @product_key.created_at.to_s[0..9] %></td>
     <tr>
       <td class = 'th_table_show_footer' colspan = '5'></td>
     </tr>
   </table>
 
   <div class = 'button_client_show_block'>
-    <%= button_to t('.edit_product_key'), product_key_path(@product_key), method: :get,
+    <%= button_to t('.edit_product_key'), edit_product_key_path, method: :get,
       class:"button_client_show_new_key", params: { lang: I18n.locale, id: @product_key.id } %>
 
       <%= button_to t('.delete_product_key'), product_key_path(@product_key), method: :delete,

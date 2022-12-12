@@ -1,0 +1,38 @@
+<div class = 'form_new_key'>
+  <%= form_with model: @product_key, local: true do |form| %>
+    <%= form.label :number_days, t('.volume_days'), class: "lable_new_key_1"%><br>
+    <%= form.number_field :number_days, class: "field_new_key_1", placeholder: t('.volume_keys_filed')%>
+    <p>
+    <%= form.label :client_id, t('.client_id'), class: "lable_new_key_1"%><br>
+    <%= form.number_field :client_id, class: "field_new_key_1", placeholder: t('.created_at')%>
+    <p>
+    <%= puts(params[:client_id]) %>
+    <p>
+    <%= form.label :status, t('.created_at'), class: "lable_new_key_1"%><br>
+    <%= form.date_field :created_at, class: "field_new_key_1", placeholder: t('.created_at')%>
+    <p>
+    <div class = 'lable_new_key_1'>
+    <%= t('.status_key') %><br>
+    </div>
+    <%= form.select :status, [['false'], ['true']] %>
+    <p>
+    <div class = 'lable_new_key_1'>
+    <%= t('.infinite_key') %><br>
+    </div>
+    <%= form.select :infinite_key, [['false'], ['true']] %>
+    <p>
+    <%= form.label :comment, t('.comment'), class: "lable_new_key_1"%><br>
+    <%= form.text_area :comment, class: "field_new_key_1", placeholder: t('.comment_filed')%>
+    <p>
+
+    <%= form.fields_for :key_type do |f| %>
+      <%= f.label :name, t('.key_type'), class: "lable_new_key_1" %><br>
+      <%= f.collection_select :key_type_id, KeyType.order(:id), :id, :name, class: "field_new_key_2"%><br>
+    <% end %>  
+
+    <p>
+
+    <%= button_to t('.update'), create_keys_path, method: :get, class:"but_form_new_key", params: { lang: I18n.locale,
+            client_id: @client_id } %>
+  <% end %>
+</div>
