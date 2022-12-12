@@ -69,6 +69,7 @@ ru:
 
   product_keys:
     show:
+      to_main: ' На главную'
       header: 'Ключ'
       client: 'Клиент'
       status: 'Статус ключа'

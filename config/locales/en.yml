@@ -88,6 +88,7 @@ en:
 
   product_keys:
     show:
+      to_main: ' To the main'
       header: 'Key'
       client: 'Client'
       status: 'Key status'
@@ -122,8 +123,11 @@ en:
       comment: 'Comment'
       key_type: 'Select the key type'
       infinite_key: 'Select true if you want to make the key perpetual'
+
+    edit:
+      header: 'Editing a key'
     
-    form_edit:
+    form_edit:      
       volume_days: 'License validity period in days'
       client_id: 'Client_id'
       created_at: 'Creation time'
@@ -132,6 +136,10 @@ en:
       comment: 'Comment'
       key_type: 'Select the key type'
       update: 'Update'
+      volume_keys_filed: 'Enter a positive integer'
+      not_client: 'The key is not linked to the client'
+      nil: 'nil'
+      client: 'The key belongs to'
 
   generals:
     index:

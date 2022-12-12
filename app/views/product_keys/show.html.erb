@@ -2,7 +2,7 @@
   <h2 class = 'page_header'><%= t('.header')%></h2>
   
   <div class = 'block_navigate'>
-      <a href="/" class="nav_botr"><%= t('.on_header') %></a>
+      <a href="/" class="nav_botr"><%= t('.to_main') %></a>
    </div>
    
    <table class="client_table">
@@ -27,7 +27,7 @@
     <% if @product_key.client.nil? %>
       <td class = 'th_table_show_true'><%= t('.not_client') %></td>
     <% else %>
-      <td class = 'th_table_show'><%= @product_key.client.name %></td>
+      <td class = 'th_table_show'><%= link_to @product_key.client.name, client_path(@product_key.client) %></td>
     <% end %>
     
     <% if @product_key.status %>
@@ -64,7 +64,7 @@
       class:"button_client_show_new_key", params: { lang: I18n.locale, id: @product_key.id } %>
 
       <%= button_to t('.delete_product_key'), product_key_path(@product_key), method: :delete,
-      class:"button_client_show_new_key", params: { lang: I18n.locale, id: @product_key.id },
+      class:"button_client_show_delete", params: { lang: I18n.locale, id: @product_key.id },
       data: { confirm: t('.question_delete')} %>
   </div>
 

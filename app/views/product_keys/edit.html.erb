@@ -1,12 +1,14 @@
 <div class = 'new_product_key'>
+ <div class = 'block_navigate_edit'>
+      <a href="/" class="nav_bot_edit"><%= t('.on_header') %></a>
+</div>      
+
   <h2 class = 'page_header_new_key'><%= t('.header')%></h2>
-  <div class = 'block_navigate'>
-      <a href="/" class="nav_botr"><%= t('.on_header') %></a>
-  </div>
-  
-  <div class = 'form_common'>
+  <h3 class = 'name_key'><%= ProductKey.find(params[:id].to_i).name %></h3>
+  <p>
+  <div class = 'block_navigate_edit'>
+      <div class = 'form_common'>
    <%= render 'form_edit' %>
   </div>
-
-
+  </div>
 </div>
