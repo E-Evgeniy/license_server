@@ -35,11 +35,17 @@ class ProductKeysController < ApplicationController
   def change_params
     edit_params = params.require(:product_key).permit(
       :name, :comment, :duration, :client_id,
-      :created_at, :infinite_period,
-      :infinite_period, :status, :key_type_id
+      :created_at, :infinite_period, :status,
+      :key_type, :key_type_id
     )
-
+    puts('[[[[[', params['product_key']['key_type'])
+    puts('pppp',params)
+    puts('dddd',edit_params)
+    edit_params['key_type_id'] = params['product_key']['key_type']['key_type_id']
+    edit_params['status'] = true if edit_params['status'] == 'true'
+    edit_params['infinite_period'] = true if edit_params['infinite_period'] == 'true'
     edit_params['client_id'] = nil if edit_params['client_id'] == ''
+    puts('dddd',edit_params)
     edit_params
   end
 end

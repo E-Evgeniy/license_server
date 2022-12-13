@@ -126,6 +126,7 @@ en:
 
     edit:
       header: 'Editing a key'
+      on_header: ' To the main'
     
     form_edit:      
       volume_days: 'License validity period in days'
@@ -140,6 +141,7 @@ en:
       not_client: 'The key is not linked to the client'
       nil: 'nil'
       client: 'The key belongs to'
+      comment_filed: 'If necessary, enter a comment for the key'      
 
   generals:
     index:
