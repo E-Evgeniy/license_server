@@ -33,6 +33,13 @@ en:
   client_keys:
     client_keys:
       header: 'Keys for'
+      to_main: ' To the main'
+      name: 'Name'
+      duration: 'Days before deactivation of the key'
+      comment: 'Comment'
+      infinite_period: 'Infinite key validity period'
+      key_type_id: 'Key Type'
+      created_at: 'Key registration date'
 
   find_clients:
     result_client:
@@ -109,6 +116,7 @@ en:
 
     added_keys:
       header: 'For the client'
+      
 
     new:
       on_header: ' To the main'
