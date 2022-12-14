@@ -30,6 +30,17 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  client_keys:
+    client_keys:
+      header: 'Keys for'
+      to_main: ' To the main'
+      name: 'Name'
+      duration: 'Days before deactivation of the key'
+      comment: 'Comment'
+      infinite_period: 'Infinite key validity period'
+      key_type_id: 'Key Type'
+      created_at: 'Key registration date'
+
   find_clients:
     result_client:
       header: 'Customer search results'
@@ -84,6 +95,7 @@ en:
 
   product_keys:
     show:
+      to_main: ' To the main'
       header: 'Key'
       client: 'Client'
       status: 'Key status'
@@ -104,6 +116,7 @@ en:
 
     added_keys:
       header: 'For the client'
+      
 
     new:
       on_header: ' To the main'
@@ -118,6 +131,25 @@ en:
       comment: 'Comment'
       key_type: 'Select the key type'
       infinite_key: 'Select true if you want to make the key perpetual'
+
+    edit:
+      header: 'Editing a key'
+      on_header: ' To the main'
+    
+    form_edit:      
+      volume_days: 'License validity period in days'
+      client_id: 'Client_id'
+      created_at: 'Creation time'
+      status_key: 'Status key'
+      infinite_key: 'Select true if you want to make the key perpetual'
+      comment: 'Comment'
+      key_type: 'Select the key type'
+      update: 'Update'
+      volume_keys_filed: 'Enter a positive integer'
+      not_client: 'The key is not linked to the client'
+      nil: 'nil'
+      client: 'The key belongs to'
+      comment_filed: 'If necessary, enter a comment for the key'      
 
   generals:
     index:

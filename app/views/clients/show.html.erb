@@ -1,6 +1,6 @@
 <div class = 'show_client'>
-  <h2 class = 'page_header'><%= t('.header') + ' ' + @client.name %></h2>
-
+  <h2 class = 'page_header'><%= t('.header') %></h2>
+  <h3 class = 'page_header_new_key_client'><%= @client.name %></h3>
   <div class = 'block_navigate'>
       <a href="/" class="nav_botr"><%= t('.on_header') %></a>
    </div>
@@ -20,9 +20,22 @@
     </tr>
     <td class = 'th_table_show'><%= @client.email %></td>
     <td class = 'th_table_show'><%= @client.comment %></td>
-    <td class = 'th_table_show'><%= @client.created_at %></td>
-    <td class = 'th_table_show'><%= @client.product_keys.where(status: true).count %></td>
-    <td class = 'th_table_show'><%= @client.product_keys.count %></td>
+    <td class = 'th_table_show'><%= @client.created_at.to_s[0..9] %></td>
+
+    <% if @client_active_keys_id.count.positive? %>      
+      <td class = 'th_table_show'><%= link_to @client_active_keys_id.count,
+                  client_keys_path(@client_active_keys_id.to_json) %></td>
+    <% else %>  
+      <td class = 'th_table_show'>0</td>
+    <% end %>
+
+    <% if @client_keys_id.count.positive? %>      
+      <td class = 'th_table_show'><%= link_to @client_keys_id.count,
+                  client_keys_path(@client_keys_id.to_json) %></td>
+    <% else %>  
+      <td class = 'th_table_show'>0</td>
+    <% end %>
+
     <tr>
       <td class = 'th_table_show_footer' colspan = '5'></td>
     </tr>

@@ -9,7 +9,7 @@ class ActionsWithClientsController < ApplicationController
 
     new_keys << create_keys1(params, new_keys, number_keys, number_days)
     new_keys.delete(new_keys.last)
-    
+
     new_keys_json = new_keys.to_json
 
     redirect_to controller: 'added_keys', action: 'added_keys', new_keys: new_keys_json

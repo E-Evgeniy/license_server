@@ -1,9 +1,4 @@
-.block_navigate_edit{
-    margin-left: 20px;
- }
-
- a.nav_bot_edit{
-    margin-top: 50px;
+a.nav_botr_ck{
     position: absolute;
     display: flex;
     align-self: center;
@@ -22,13 +17,14 @@
     text-decoration:none;
     text-align:center;
     opacity:.8;
+    margin-top: -50px;
     letter-spacing: 1px;
       -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
      -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
        -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
           transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450); /* linear */
   }
-  a.nav_bot_edit:hover{
+  a.nav_botr_ck:hover{
     width:150px;
     height:20px;
     padding-top:10px;
@@ -41,9 +37,3 @@
        -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
           transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450); /* linear */
   }
-
-  .form_edit_key {
-    width: 300px;
-    margin: auto;
-    padding-top:50px;
-}

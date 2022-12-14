@@ -2,7 +2,10 @@ class ClientsController < ApplicationController
   # validates_format_of :email, :with => /.+@.+\..+/i   #/@/
   before_action :load_client, only: %i[show destroy edit update]
 
-  def show; end
+  def show
+    @client_active_keys_id = find_active_keys_id
+    @client_keys_id = find_keys_id
+  end
 
   def new
     @client = Client.new
@@ -39,6 +42,26 @@ class ClientsController < ApplicationController
   end
 
   private
+
+  def find_active_keys_id
+    return [] unless @client.product_keys.where(status: true).count.positive?
+
+    forming_array(@client.product_keys.where(status: true))
+  end
+
+  def find_keys_id
+    return [] unless @client.product_keys.count.positive?
+
+    forming_array(@client.product_keys)
+  end
+
+  def forming_array(obj)
+    array_client_keys = []
+    obj.each do |c_key|
+      array_client_keys << c_key.id
+    end
+    array_client_keys
+  end
 
   def client_params
     params.require(:client).permit(:name, :comment, :email)

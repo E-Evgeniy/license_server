@@ -1,10 +1,28 @@
 ru:
+  client_keys:
+    client_keys:
+      header: 'Keys for'
+      to_main: ' To the main'
+      name: 'Имя'
+      duration: 'Дней до дезактивации ключа'
+      comment: 'Комментарий'
+      infinite_period: 'Бесконечный срок действия ключа'
+      key_type_id: 'Тип ключа'
+      created_at: 'Дата регистрации ключа'
+
   find_clients:
     result_client:
       header: 'Результаты поиска клиента'
       to_main: 'На главную'
       not_find: 'Ничего не найдено :('
       find_again: 'Поискать снова'
+      email: 'Почта'
+      comment: 'Комментарий'
+      name: 'Имя'
+      reg_data: 'Дата регистрации'
+      active keys: 'Количество активных ключей'
+      all_keys: 'Всего ключей'
+      actions: 'Действия'
 
     form:
       name: 'Имя'
@@ -62,6 +80,7 @@ ru:
 
   product_keys:
     show:
+      to_main: ' На главную'
       header: 'Ключ'
       client: 'Клиент'
       status: 'Статус ключа'
@@ -81,8 +100,18 @@ ru:
       question_delete: 'Вы действительно хотите удалить этот ключ?'
 
 
+  added_keys:
     added_keys:
-      header: 'Для клиента'
+      header: 'Добавленные ключи для'
+      name: 'Имя'
+      duration: 'Дней до дезактивации ключа'
+      comment: 'Комментарий'
+      infinite_period: 'Бесконечный срок действия ключа'
+      key_type_id: 'Тип ключа'
+      created_at: 'Дата регистрации ключа'
+      not_limited: 'не ограничен'
+      to_client: 'возврат к клиенту'
+      to_main: ' На главную'
       
     new:
       on_header: 'На главную'
