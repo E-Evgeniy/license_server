@@ -30,6 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  give_keys:
+    give_key:
+      header_0: 'Adding a key'
+      header_1: 'to the client'
+
   client_keys:
     client_keys:
       header: 'Keys for'
