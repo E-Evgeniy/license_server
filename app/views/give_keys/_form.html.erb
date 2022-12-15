@@ -1,0 +1,45 @@
+<div class = 'form_edit_key'>
+  <%= form_with url: "assign_key", method: :get do |form| %>
+    <%= form.label :duration, t('.volume_days'), class: "lable_new_key_1"%><br>
+    <%= form.number_field :duration, class: "field_new_key_1", placeholder: t('.volume_keys_filed')%>
+    <p>
+    <div class = 'name_client'>
+    <% if ProductKey.find(params[:id].to_i).client.nil? %>
+      <%= t('.not_client') %>
+    <% else %>
+      <%= t('.client') %> <b><%= ProductKey.find(params[:id].to_i).client.name %> </b>
+    <% end %>
+    </div>
+    <p>
+    <%= form.label :client_id, t('.client_id'), class: "lable_new_key_1"%><br>
+    <%= form.number_field :client_id, class: "field_new_key_1", placeholder: t('.nil')%>
+    <p>
+    
+    <%= form.label :created_at, t('.created_at'), class: "lable_new_key_1"%><br>
+    <%= form.date_field :created_at, class: "field_new_key_1", placeholder: t('.created_at')%>
+    <p>
+    <div class = 'lable_new_key_1'>
+    <%= t('.status_key') %><br>
+    </div>
+    <%= form.select :status, [['false'], ['true']] %>
+    <p>
+    <div class = 'lable_new_key_1'>
+    <%= t('.infinite_key') %><br>
+    </div>
+    <%= form.select :infinite_period, [['false'], ['true']] %>
+    <p>
+    <%= form.label :comment, t('.comment'), class: "lable_new_key_1"%><br>
+    <%= form.text_area :comment, class: "field_new_key_1", placeholder: t('.comment_filed')%>
+    <p>
+
+    <%= form.fields_for :key_type do |f| %>
+      <%= f.label :key_type_id, t('.key_type'), class: "lable_new_key_1" %><br>
+      <%= f.collection_select :key_type_id, KeyType.order(:id), :id, :name, class: "field_new_key_2"%><br>
+    <% end %>  
+
+    <p>
+
+    <%= button_to t('.update'), create_keys_path, method: :get, class:"but_form_new_key", params: { lang: I18n.locale,
+            client_id: @client_id } %>
+  <% end %>
+</div>
