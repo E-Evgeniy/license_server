@@ -46,8 +46,9 @@
       class:"button_client_show_new_key", params: { lang: I18n.locale, client_id: @client.id } %>
     
     <% if ProductKey.where(client_id: nil).where(status: true).exists? %>
-    <%= button_to t('.give_key'), new_client_path, method: :get,
-      class:"button_client_show_get_key", params: { lang: I18n.locale } %>
+    <%= button_to t('.give_key'), give_key_path, method: :get,
+      class:"button_client_show_get_key", params: { lang: I18n.locale, client_id: @client.id, 
+      key_id: ProductKey.where(client_id: nil).where(status: true).last.id } %>
     <% end %>
 
     <%= button_to t('.edit_client'), edit_client_path, method: :get,

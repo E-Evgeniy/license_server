@@ -30,6 +30,27 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  give_keys:
+    give_key:
+      header: 'Adding a key'
+      to_main: ' To the main'
+    
+    form:
+      key: 'Name key'   
+      volume_days: 'License validity period in days'
+      client_id: 'Client_id'
+      created_at: 'Creation time'
+      status_key: 'Status key'
+      infinite_key: 'Select true if you want to make the key perpetual'
+      comment: 'Comment'
+      key_type: 'Select the key type'
+      update: 'Update'
+      volume_keys_filed: 'Enter a positive integer'
+      not_client: 'The key is not linked to the client'
+      nil: 'nil'
+      client: 'The key belongs to'
+      comment_filed: 'If necessary, enter a comment for the key'
+
   client_keys:
     client_keys:
       header: 'Keys for'

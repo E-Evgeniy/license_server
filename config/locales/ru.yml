@@ -1,8 +1,30 @@
 ru:
+  give_keys:
+    give_key:
+      header: 'Добавление ключа'
+      to_main: 'На главную'
+    
+    form:
+      key: 'Имя ключа'   
+      client_id: 'Client_id'
+      created_at: 'Время создания'
+      status_key: 'Статус ключа'
+      volume_days: 'Срок действия лицензии в днях'
+      comment_filed: 'Если необходимо введите комментарий для ключа'
+      comment: 'Комментарий'
+      infinite_key: 'Выберите true если хотите сделать ключ бессрочным'
+      key_type: 'Выберите тип ключа'
+      update: 'Обновить'
+      volume_keys_filed: 'Введите целое положительное число'
+      not_client: 'ключ не привязан к клиенту'
+      nil: 'nil'
+      client: 'Ключ для'
+
+
   client_keys:
     client_keys:
-      header: 'Keys for'
-      to_main: ' To the main'
+      header: 'Ключ для'
+      to_main: 'На главную'
       name: 'Имя'
       duration: 'Дней до дезактивации ключа'
       comment: 'Комментарий'
