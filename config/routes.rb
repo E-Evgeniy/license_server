@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   get 'result_client', to: 'find_clients#result_client', as: :result_client
 
   get 'give_key', to: 'give_keys#give_key', as: :give_key
+  get 'assign_key', to: 'give_keys#assign_key', as: :assign_key
 end
