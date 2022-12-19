@@ -5,9 +5,7 @@ class FindKeysController < ApplicationController
   def find_key; end
 
   def result_key
-    @clients = FindClient.search_result(params)
-    @clients.each do |client|
-      CheckKey.analiz(client.product_keys)
-    end
+    puts('wwwwwwwww',params)
+    
   end
 end

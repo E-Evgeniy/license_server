@@ -1,7 +1,7 @@
 .box {
     display: -webkit-flex; 
     display: flex;
-    justify-content: center  
+    justify-content: center;
 }
 
 .box_header {
@@ -11,10 +11,16 @@
     text-align:center;
     font-weight: bold;
     letter-spacing: 1px;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    justify-content: center;
 }
 
 .box_nav {
     margin-top: 60px;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    justify-content: center  
 }
 
 .box_form {
