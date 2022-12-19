@@ -37,12 +37,17 @@ en:
 
     form:
       name: 'Name key'
-      range_duration: 'Range duration'
-      duration_begin: 'Duration begin'
-      duration_end: 'Duration end'
+      range_duration: 'Key duration range in days'
+      duration_begin: 'Beginning of the range'
+      duration_end: 'End of the range'
       comment: 'Comment'
-      infinite_key: 'Select true if you want to make the key perpetual'
-      status_key: 'Status key'
+      infinite_key: 'Select true if the key is perpetual'
+      status_key: 'The key is active'
+      key_type: 'Select the key type'
+      data_begin: 'Beginning of the period'
+      data_end: 'End of the period'
+      period_registration: 'Registration period:'
+      find: 'Find'
 
   give_keys:
     give_key:

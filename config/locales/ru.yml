@@ -1,4 +1,23 @@
 ru:
+  find_keys:
+    find_key:
+      header: 'Поиск ключа'
+      to_main: 'На главную'
+
+    form:
+      name: 'Имя ключа'
+      range_duration: 'Диапазон длительности ключа в днях'
+      duration_begin: 'Начало диапазона'
+      duration_end: 'Конец диапазона'
+      comment: 'Комментарий'
+      infinite_key: 'Выберите true если ключ бессрочный'
+      status_key: 'Ключ активный'
+      key_type: 'Выберите тип ключа'
+      period_registration: 'Период регистрации:'
+      data_begin: 'Начало периода'
+      data_end: 'Конец периода'
+      find: 'Найти'
+
   give_keys:
     give_key:
       header: 'Добавление ключа'

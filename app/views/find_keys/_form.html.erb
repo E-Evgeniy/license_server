@@ -1,4 +1,4 @@
-<div class = "text_field_email">
+<div>
 <%= form_with url: "result_key", method: :get do |form| %>
   <%= form.label t('.name'), class: 'field_description' %><br>
   <%= form.text_area :name, id: :key_name, class: 'lable_new_key_1' %>
@@ -30,6 +30,8 @@
       <%= f.label :key_type_id, t('.key_type'), class: "lable_new_key_1" %><br>
       <%= f.collection_select :key_type_id, KeyType.order(:id), :id, :name, class: "field_new_key_2"%><br>
     <% end %>
+  <p>
+  <b><%= t('.period_registration')%></b>
   <p>
   <%= form.label :data_begin, t('.data_begin'), class: "text_field_email"%><br>
   <%= form.date_field :data_begin, class: "text_field_type"%>
