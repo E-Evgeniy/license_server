@@ -30,6 +30,20 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  find_keys:
+    find_key:
+      header: 'Find key'
+      to_main: ' To the main'
+
+    form:
+      name: 'Name key'
+      range_duration: 'Range duration'
+      duration_begin: 'Duration begin'
+      duration_end: 'Duration end'
+      comment: 'Comment'
+      infinite_key: 'Select true if you want to make the key perpetual'
+      status_key: 'Status key'
+
   give_keys:
     give_key:
       header: 'Adding a key'

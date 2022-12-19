@@ -1,0 +1,42 @@
+<div class = "text_field_email">
+<%= form_with url: "result_key", method: :get do |form| %>
+  <%= form.label t('.name'), class: 'field_description' %><br>
+  <%= form.text_area :name, id: :key_name, class: 'lable_new_key_1' %>
+  <p>
+  <b><%= t('.range_duration')%></b>
+  <p>
+  <%= form.label :duration_begin, t('.duration_begin'), class: "text_field_email"%><br>
+  <%= form.date_field :duration_begin, class: "text_field_type"%>
+  <p>
+  <%= form.label :duration_end, t('.duration_end'), class: "text_field_email"%><br>
+  <%= form.date_field :duration_end, class: "text_field_type"%>
+  <p>
+  <%= form.label t('.comment'), class: 'field_description' %><br>
+  <%= form.text_area :comment, id: :key_comment, class: 'text_field_comment' %>
+  <p>
+  <div class = 'lable_new_key_1'>
+    <%= t('.infinite_key') %><br>
+    </div>
+  <%= form.select :infinite_period, [['false'], ['true']] %>
+  <p>
+  <div class = 'lable_new_key_1'>
+    <%= t('.status_key') %><br>
+    </div>
+  <%= form.select :status, [['false'], ['true']] %>
+  <p>
+  
+  
+  <%= form.fields_for :key_type do |f| %>
+      <%= f.label :key_type_id, t('.key_type'), class: "lable_new_key_1" %><br>
+      <%= f.collection_select :key_type_id, KeyType.order(:id), :id, :name, class: "field_new_key_2"%><br>
+    <% end %>
+  <p>
+  <%= form.label :data_begin, t('.data_begin'), class: "text_field_email"%><br>
+  <%= form.date_field :data_begin, class: "text_field_type"%>
+  <p>
+  <%= form.label :data_end, t('.data_end'), class: "text_field_email"%><br>
+  <%= form.date_field :data_end, class: "text_field_type"%>
+  <p>
+  <%= button_to t('.find'), result_client_path, method: :get, class:"button_form_new_type", params: { lang: I18n.locale } %>
+ <% end %>
+ </div>

@@ -20,4 +20,7 @@ Rails.application.routes.draw do
 
   get 'give_key', to: 'give_keys#give_key', as: :give_key
   get 'assign_key', to: 'give_keys#assign_key', as: :assign_key
+
+  get 'find_key', to: 'find_keys#find_key', as: :find_key
+  get 'result_key', to: 'find_keys#result_key', as: :result_key
 end
