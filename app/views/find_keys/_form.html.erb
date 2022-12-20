@@ -6,10 +6,10 @@
   <b><%= t('.range_duration')%></b>
   <p>
   <%= form.label :duration_begin, t('.duration_begin'), class: "text_field_email"%><br>
-  <%= form.date_field :duration_begin, class: "text_field_type"%>
+  <%= form.number_field :duration_begin, class: "text_field_type"%>
   <p>
   <%= form.label :duration_end, t('.duration_end'), class: "text_field_email"%><br>
-  <%= form.date_field :duration_end, class: "text_field_type"%>
+  <%= form.number_field :duration_end, class: "text_field_type"%>
   <p>
   <%= form.label t('.comment'), class: 'field_description' %><br>
   <%= form.text_area :comment, id: :key_comment, class: 'text_field_comment' %>
