@@ -2,7 +2,9 @@
 
 # module for forming find string request
 module StringRequest
+
   def self.forming_query_string(params, obj)
+    puts('ssssssssssLL',@exceptions)
     s_date = find_begin_end(params[:data_begin], params[:data_end], obj, 'created_at')
 
     return if s_date.nil?
@@ -10,7 +12,7 @@ module StringRequest
     if obj == 'Productkey'
       s_duration = find_begin_end(params[:duration_begin],
                    params[:duration_end], obj, 'duration')
-      s_parametrs_boolean =              
+      s_parametrs_boolean = 1             
     end
 
     s_parametrs = find_parametrs(params)
@@ -27,9 +29,17 @@ module StringRequest
     result
   end
 
+  def self.check_boolean_params(key)
+    values = [ 'infinite_period',
+    'status', 'key_type' ]
+
   def self.check_params(key, value)
-    key == 'lang' || value.empty? || key == 'data_begin' ||
-      key == 'data_end' || key == 'controller' || key == 'action'
+    exceptions = ['lang', 'data_begin', 'data_end', 'controller', 'action',
+                  'duration_begin', 'duration_end', 'infinite_period',
+                  'status', 'key_type'
+                  ]
+
+    exceptions.include? key || value.empty?
   end
 
   def self.find_begin_end(period_begin, period_end, obj, field)
