@@ -4,14 +4,14 @@
 module StringRequest
 
   def self.forming_query_string(params, obj)
-    puts('ssssssssssLL',@exceptions)
-    s_date = find_begin_end(params[:data_begin], params[:data_end], obj, 'created_at')
+    s_date = find_begin_end(params[:data_begin], params[:data_end], obj, 'created_at', 0, 10)
 
     return if s_date.nil?
+
     s_duration = ''
     if obj == 'Productkey'
       s_duration = " AND #{find_begin_end(params[:duration_begin],
-                   params[:duration_end], obj, 'duration')}"
+                   params[:duration_end], obj, 'duration', 0, 0)}"
     end
 
     s_parametrs = find_parametrs(params)
@@ -21,23 +21,33 @@ module StringRequest
 
   def self.find_parametrs(params)
     query_str = ''
-    query_str_boolean = ''
+    query_str_strong = ''
     params.each do |key, value|
       query_str = check_params(key, value, query_str)
-      query_str_boolean = check_boolean_params(key, value, query_str_boolean)
+      query_str_strong = check_strong_params(key, value, query_str_strong)
     end
 
-    "#{query_str} #{query_str_boolean}"
+    "#{query_str} #{query_str_strong}"
   end
 
-  def self.check_boolean_params(key, value, result)
+  def self.check_strong_params(key, value, result)
     values = %w[infinite_period status key_type]
 
     if values.include? key
-      "#{result} AND #{key} = #{value}"
+      forming_strong_str(key, value, result)
     else
       result
     end
+  end
+
+  def self.forming_strong_str(key, value, result)
+    puts('key',key)
+    puts('value',value)
+    if key == 'key_type'
+      "#{result} AND key_type_id = #{value['key_type_id']}"
+    else
+      "#{result} AND #{key} = #{value}"
+    end    
   end
 
   def self.check_params(key, value, result)
@@ -52,10 +62,12 @@ module StringRequest
     end
   end
 
-  def self.find_begin_end(period_begin, period_end, obj, field)
+  def self.find_begin_end(period_begin, period_end, obj, field, delta_begin, delta_end)
     return if eval("#{obj}.all.empty?")
+    initial_value = find_date(period_begin, obj, 'asc', delta_begin, field)
+    final_value = find_date(period_end, obj, 'desc', delta_end, field)
 
-    "#{field} between '#{find_date(period_begin, obj, 'asc', 0, field)}' and '#{find_date(period_end, obj, 'desc', 10, field)}'"
+    "#{field} between '#{initial_value}' and '#{final_value}'"
   end
 
   def self.find_date(data_perid, obj, sort, delta, field)

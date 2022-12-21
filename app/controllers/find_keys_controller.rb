@@ -7,6 +7,5 @@ class FindKeysController < ApplicationController
   def result_key
     puts('wwwwwwwww',params)
     @keys = FindKey.search_result(params)
-    puts('555555555',@keys)
   end
 end
