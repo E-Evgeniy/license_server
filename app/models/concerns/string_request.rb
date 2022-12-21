@@ -8,38 +8,48 @@ module StringRequest
     s_date = find_begin_end(params[:data_begin], params[:data_end], obj, 'created_at')
 
     return if s_date.nil?
-
+    s_duration = ''
     if obj == 'Productkey'
-      s_duration = find_begin_end(params[:duration_begin],
-                   params[:duration_end], obj, 'duration')
-      s_parametrs_boolean = 1             
+      s_duration = " AND #{find_begin_end(params[:duration_begin],
+                   params[:duration_end], obj, 'duration')}"
     end
 
     s_parametrs = find_parametrs(params)
-    puts('LLLLLLLLLLLLLL',"#{s_date} #{s_parametrs}")
-    "#{s_date} #{s_parametrs}"
+    puts('LLLLLLLLLLLLLL',"#{s_date} #{s_parametrs} #{s_duration}")
+    "#{s_date} #{s_parametrs} #{s_duration}"
   end
 
   def self.find_parametrs(params)
-    result = ''
+    query_str = ''
+    query_str_boolean = ''
     params.each do |key, value|
-      result = "#{result} AND #{key} LIKE '%#{value}%'" unless check_params(key, value)
+      query_str = check_params(key, value, query_str)
+      query_str_boolean = check_boolean_params(key, value, query_str_boolean)
     end
-    
-    result
+
+    "#{query_str} #{query_str_boolean}"
   end
 
-  def self.check_boolean_params(key)
-    values = [ 'infinite_period',
-    'status', 'key_type' ]
+  def self.check_boolean_params(key, value, result)
+    values = %w[infinite_period status key_type]
 
-  def self.check_params(key, value)
-    exceptions = ['lang', 'data_begin', 'data_end', 'controller', 'action',
-                  'duration_begin', 'duration_end', 'infinite_period',
-                  'status', 'key_type'
-                  ]
+    if values.include? key
+      "#{result} AND #{key} = #{value}"
+    else
+      result
+    end
+  end
 
-    exceptions.include? key || value.empty?
+  def self.check_params(key, value, result)
+    exceptions = %w[lang data_begin data_end controller action
+                    duration_begin duration_end infinite_period
+                    status key_type]
+
+    if exceptions.include?(key) || value.empty?
+      result
+    else
+      "#{result} AND #{key} LIKE '%#{value}%'"
+    end
   end
 
   def self.find_begin_end(period_begin, period_end, obj, field)
