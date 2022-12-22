@@ -49,6 +49,18 @@ en:
       period_registration: 'Registration period:'
       find: 'Find'
 
+    result_key:
+      to_main: ' To the main'
+      header: 'Key search result'
+      client: 'Client'
+      status: 'Key status'
+      name: 'Name'
+      duration: 'Days before deactivation of the key'
+      comment: 'Comment'
+      infinite_period: 'Infinite key validity period'
+      key_type_id: 'Key Type'
+      created_at: 'Key registration date'
+
   give_keys:
     give_key:
       header: 'Adding a key'
@@ -80,6 +92,9 @@ en:
       infinite_period: 'Infinite key validity period'
       key_type_id: 'Key Type'
       created_at: 'Key registration date'
+      status_key: 'Status key'
+      active: 'active'
+      not_active: 'not active'
 
   find_clients:
     result_client:

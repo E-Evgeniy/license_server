@@ -5,6 +5,7 @@ class FindKey < ApplicationRecord
   
     def self.search_result(params)
       string_request = StringRequest.forming_query_string(params, 'ProductKey')
+      puts('OOOOOOOOOOOOOOOOOOO',string_request)
       ProductKey.where(string_request)
     end
   end
