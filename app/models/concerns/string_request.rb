@@ -15,7 +15,6 @@ module StringRequest
     end
 
     s_parametrs = find_parametrs(params)
-    puts('LLLLLLLLLLLLLL',"#{s_date} #{s_parametrs} #{s_duration}")
     "#{s_date} #{s_parametrs} #{s_duration}"
   end
 
@@ -24,36 +23,39 @@ module StringRequest
     query_str_strong = ''
     params.each do |key, value|
       query_str = check_params(key, value, query_str)
-      query_str_strong = check_strong_params(key, value, query_str_strong)
+      query_str_strong = check_strong_params(key, value, query_str_strong, params)
     end
 
-    "#{query_str} #{query_str_strong}"
+    "#{query_str} #{query_str_strong}"    
   end
 
-  def self.check_strong_params(key, value, result)
+  def self.check_strong_params(key, value, result,params)
     values = %w[infinite_period status key_type]
 
     if values.include? key
-      forming_strong_str(key, value, result)
+      forming_strong_str(key, value, result, params)
     else
       result
     end
   end
 
-  def self.forming_strong_str(key, value, result)
-    puts('key',key)
-    puts('value',value)
+  def self.forming_strong_str(key, value, result, params)
     if key == 'key_type'
-      "#{result} AND key_type_id = #{value['key_type_id']}"
+      "#{result} AND key_type_id = #{value['key_type_id']}" if need_key_type(params)
     else
-      "#{result} AND #{key} = #{value}"
+      "#{result} AND #{key} = #{value}" unless value == 'all'
     end    
   end
+
+  def self.need_key_type(params)
+    params['consider_the_key_type']['accepted'] == 'yes'
+  end
+    
 
   def self.check_params(key, value, result)
     exceptions = %w[lang data_begin data_end controller action
                     duration_begin duration_end infinite_period
-                    status key_type]
+                    status key_type consider_the_key_type]
 
     if exceptions.include?(key) || value.empty?
       result

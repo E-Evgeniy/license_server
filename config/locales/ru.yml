@@ -12,7 +12,7 @@ ru:
       comment: 'Комментарий'
       infinite_key: 'Выберите true если ключ бессрочный'
       status_key: 'Ключ активный'
-      key_type: 'Выберите тип ключа'
+      key_type: 'Учитывать тип ключа'
       period_registration: 'Период регистрации:'
       data_begin: 'Начало периода'
       data_end: 'Конец периода'

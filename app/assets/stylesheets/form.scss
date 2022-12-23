@@ -1,23 +1,101 @@
 .box {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
 }
 
 .box_header {
-    margin-top: -50px;
     font-family: 'Dosis', sans;
     font-size: 35px;
     text-align:center;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-top: -50px;
+    display: flex;
+    align-self: center;
 }
 
 .box_nav {
-    margin-top: 10px;
-    justify-content: left;  
+    margin-top: -60px;
+    text-align: left;
+    margin-left: 50px;
 }
 
 .box_form {
-    justify-content: center;
+    display: flex;
+    align-self: center;
+    padding-top:80px;
+}
+
+.field_description {
+    font-family: 'Times', 'Times New Roman', sans;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+   }
+
+.field_name {
+    font-family: 'Arial', sans;
+    width: 300px;
+    height:30px;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 9px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    background:rgb(246, 250, 252);
+   }
+
+.header_in_form {
+    font-family: 'Times', 'Times New Roman', sans;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.name_field_duration {
+    font-family: 'Times', 'Times New Roman', sans;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.field_duration {
+    font-family: 'Arial', sans;
+    width: 300px;
+    height:20px;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    background:rgb(249, 252, 246);
+    border-width: 1px;
+}
+
+.description_comment {
+    font-family: 'Times', 'Times New Roman', sans;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+    
+    width: 300px;
+}
+
+.field_comment {
+    font-family: 'Arial', sans;
+    width: 293px;
+    height:110px;
+    margin-top: 10px;
+    padding: 7px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    border:1px solid #000;
+    background:rgb(252, 251, 246);
+}
+
+.m_top {
     margin-top: 40px;
 }

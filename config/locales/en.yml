@@ -43,7 +43,7 @@ en:
       comment: 'Comment'
       infinite_key: 'Select true if the key is perpetual'
       status_key: 'The key is active'
-      key_type: 'Select the key type'
+      key_type: 'Consider the key type'
       data_begin: 'Beginning of the period'
       data_end: 'End of the period'
       period_registration: 'Registration period:'
