@@ -1,26 +1,20 @@
 .box {
-    display: -webkit-flex; 
     display: flex;
     justify-content: center;
 }
 
 .box_header {
-    margin-top: 10px;
+    margin-top: -50px;
     font-family: 'Dosis', sans;
     font-size: 35px;
     text-align:center;
     font-weight: bold;
     letter-spacing: 1px;
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    justify-content: center;
 }
 
 .box_nav {
-    margin-top: 60px;
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    justify-content: center  
+    margin-top: 10px;
+    justify-content: left;  
 }
 
 .box_form {
