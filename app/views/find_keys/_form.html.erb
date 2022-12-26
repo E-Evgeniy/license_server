@@ -1,0 +1,55 @@
+<div>
+<%= form_with url: "result_key", method: :get do |form| %>
+  <%= form.label t('.name'), class: 'field_description' %><br>
+  <%= form.text_area :name, id: :key_name, class: 'field_name' %>
+  <p>
+  <div class = 'header_in_form'>
+    <b><%= t('.range_duration')%></b>
+  </div> 
+  <p>
+  <%= form.label :duration_begin, t('.duration_begin'), class: "name_field_duration"%><br>
+  <%= form.number_field :duration_begin, class: "field_duration"%>
+  <p>
+  <%= form.label :duration_end, t('.duration_end'), class: "name_field_duration"%><br>
+  <%= form.number_field :duration_end, class: "field_duration"%>
+  <p>
+  <div class = 'm_top'>
+  <%= form.label t('.comment'), class: 'description_comment' %><br>
+  <%= form.text_area :comment, id: :key_comment, class: 'field_comment' %>
+  </div>
+  <p>
+  <div class = 'description_comment'>
+    <%= t('.infinite_key') %><br>
+    </div>
+  <%= form.select :infinite_period, [['all'], ['false'], ['true']] %>
+  <p>
+  <div class = 'description_comment'>
+    <%= t('.status_key') %><br>
+    </div>
+  <%= form.select :status, [['all'], ['false'], ['true']] %>
+  
+  <p>
+  
+  <%= check_box("consider_the_key_type", "accepted", { class: 'consider_the_key_type' }, "yes", "no") %>
+  <%= form.fields_for :key_type do |f| %>
+      <%= f.label :key_type_id, t('.key_type'), class: "description_comment" %><br>
+      <%= f.collection_select :key_type_id, KeyType.order(:id), :id, :name, class: "field_new_key_2"%><br>
+    <% end %>
+  
+  <p>
+  <%= check_box( "no_client", "accepted", { class: 'consider_the_key_type' }, "yes", "no") %>
+  <%= form.label :key_type_id, t('.no_client'), class: "header_in_form" %><br>
+  <p>
+  <div class = 'header_in_form'>
+    <b><%= t('.period_registration')%></b>
+  </div>
+  <p>
+  <%= form.label :data_begin, t('.data_begin'), class: "name_field_duration"%><br>
+  <%= form.date_field :data_begin, class: "field_duration"%>
+  <p>
+  <%= form.label :data_end, t('.data_end'), class: "name_field_duration"%><br>
+  <%= form.date_field :data_end, class: "field_duration"%>
+  <p>
+  <%= button_to t('.find'), result_client_path, method: :get, class:"button_form_done", params: { lang: I18n.locale } %>
+ <% end %>
+ </div>

@@ -30,6 +30,45 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  find_keys:
+    find_key:
+      header: 'Find key'
+      to_main: ' To the main'
+
+    form:
+      name: 'Name key'
+      range_duration: 'Key duration range in days'
+      duration_begin: 'Beginning of the range'
+      duration_end: 'End of the range'
+      comment: 'Comment'
+      infinite_key: 'Select true if the key is perpetual'
+      status_key: 'The key is active'
+      key_type: 'Consider the key type'
+      data_begin: 'Beginning of the period'
+      data_end: 'End of the period'
+      period_registration: 'Registration period:'
+      find: 'Find'
+      
+
+    result_key:
+      to_main: ' To the main'
+      header: 'Key search result'
+      client: 'Client'
+      status: 'Key status'
+      name: 'Name'
+      duration: 'Days before deactivation of the key'
+      comment: 'Comment'
+      infinite_period: 'Infinite key validity period'
+      key_type_id: 'Key Type'
+      created_at: 'Key registration date'
+      not_find: 'Nothing found :('
+      find_again: 'Search again'
+      duration_true: 'Key duration in days'
+      num: '№'
+      not_active: ' Not active'
+      active: ' Ative'
+      not_client: 'The key is not bound to the client'
+
   give_keys:
     give_key:
       header: 'Adding a key'
@@ -61,6 +100,9 @@ en:
       infinite_period: 'Infinite key validity period'
       key_type_id: 'Key Type'
       created_at: 'Key registration date'
+      status_key: 'Status key'
+      active: 'active'
+      not_active: 'not active'
 
   find_clients:
     result_client:
@@ -220,3 +262,6 @@ en:
       sign_up: 'Sign up'
       lang: 'Русская версия'
       on_header: ' To the main'
+    
+    footer:
+      description: 'An application for creating, storing and managing clients and keys for Leo'

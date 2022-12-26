@@ -1,0 +1,149 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.box_header {
+    font-family: 'Dosis', sans;
+    font-size: 25px;
+    text-align:center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    display: flex;
+    align-self: center;
+}
+
+.box_nav {
+    margin-top: -20px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.box_form {
+    display: flex;
+    align-self: center;
+    padding-top:80px;
+}
+
+.field_description {
+    font-family: 'Times', 'Times New Roman', sans;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 300px;
+   }
+
+.field_name {
+    font-family: 'Arial', sans;
+    width: 300px;
+    height:30px;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 9px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    background:rgb(246, 250, 252);
+   }
+
+.header_in_form {
+    font-family: 'Times', 'Times New Roman', sans;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    width: 300px;
+}
+
+.name_field_duration {
+    font-family: 'Times', 'Times New Roman', sans;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.field_duration {
+    font-family: 'Arial', sans;
+    width: 300px;
+    height:20px;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    background:rgb(249, 252, 246);
+    border-width: 1px;
+}
+
+.description_comment {
+    font-family: 'Times', 'Times New Roman', sans;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+    
+    width: 300px;
+}
+
+.field_comment {
+    font-family: 'Arial', sans;
+    width: 293px;
+    height:110px;
+    margin-top: 10px;
+    padding: 7px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    border:1px solid #000;
+    background:rgb(252, 251, 246);    
+}
+
+.m_top {
+    margin-top: 40px;
+}
+
+.button_form_done {
+    float: left;
+    background:rgb(238, 236, 236);
+    width:300px;
+    height:50px;
+    font-family: 'Dosis', sans;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform:uppercase;
+    border:1px solid #000;
+    margin-top: 20px;
+    cursor: pointer;
+    -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+     -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+       -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+          transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450); /* linear */
+  }
+
+  .button_form_done:hover {
+    float: left;
+    background:rgba(96, 233, 42, 0.623);
+    width:300px;
+    height:50px;
+    font-family: 'Dosis', sans;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform:uppercase;
+    border:1px solid teal;
+    margin-top: 20px;
+    cursor: pointer;
+    -webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+     -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+       -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450);
+          transition: all 300ms cubic-bezier(0.250, 0.250, 0.450, 0.450); /* linear */
+  }
+
+  .table {
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 100px;
+    overflow-wrap: break-word;
+    text-align: center;
+
+  }

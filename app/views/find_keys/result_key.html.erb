@@ -1,0 +1,79 @@
+<div class = 'box'>
+  <h2 class = 'box_header'><%= t('.header')%></h2>
+  <div class = 'box_nav'>
+    <a href="/" class="nav_botr"><%= t('.to_main') %></a>
+  </div> 
+    <% if @keys[0].nil? %>
+      <div class = 'not_find' >
+        <%= t('.not_find') %> 
+      </div>
+    <% else %>
+    <table class="table">
+      <col width="70">
+      <col width="220">
+      <col width="150">
+      <col width="230">
+      <col width="150">
+      <col width="150">
+      <col width="200">
+      <col width="150">
+      <col width="100">
+      <col width="150">
+      <tr>
+        <th class = 'th_table_show_head'><%=t('.num')%></th>
+        <th class = 'th_table_show_head'><%=t('.name')%></th>
+        <th class = 'th_table_show_head'><%=t('.client')%></th>
+        <th class = 'th_table_show_head'><%= t('.comment') %></th>
+        <th class = 'th_table_show_head'><%=t('.status')%></th>
+        <th class = 'th_table_show_head'><%= t('.duration_true') %></th>
+        <th class = 'th_table_show_head'><%= t('.duration') %></th>
+        <th class = 'th_table_show_head'><%= t('.infinite_period') %></th>
+        <th class = 'th_table_show_head'><%= t('.key_type_id') %></th>
+        <th class = 'th_table_show_head'><%= t('.created_at') %></th>
+      </tr>
+      <% i = 1 %>
+      <% @keys.each do |key| %>
+        <tr>
+          <td class = 'th_table_show'><%= i %></td>
+          <td class = 'th_table_show'><%= link_to key.name, product_key_path(key) %></td>
+
+          <% if key.client.nil? %>
+            <td class = 'th_table_show_info'><%= t('.not_client') %></td>
+          <% else %>
+            <td class = 'th_table_show'><%= link_to key.client.name, client_path(key.client) %></td>
+          <% end %>
+
+          <td class = 'th_table_show'><%= key.comment %></td>
+          <% if key.status %>
+            <td class = 'th_table_show_true'><%= t('.active') %></td>
+          <% else %>
+            <td class = 'th_table_show_false'><%= t('.not_active') %></td>
+          <% end %>
+
+          <td class = 'th_table_show'><%= key.duration %></td>
+
+          <% if key.infinite_period %>
+            <td class = 'th_table_show_true'><%= t('.not_limited') %></td>
+          <% else %>
+            <td class = 'th_table_show'><%= CheckKey.working_days(key) %></td>
+          <% end %>
+
+          <% if key.infinite_period %>
+            <td class = 'th_table_show_true'><%= t('.active') %></td>
+          <% else %>
+            <td class = 'th_table_show_false'><%= t('.not_active') %></td>
+          <% end %>
+
+          <td class = 'th_table_show'><%= key.key_type.name %></td>
+          <td class = 'th_table_show'><%= key.created_at.to_s[0..9] %></td>
+          
+        </tr>
+        <% i += 1 %>
+      <% end %>
+    </table>
+    <% end %>
+    <div class = 'after_find' >
+        <%= button_to t('.find_again'), find_key_path, method: :get,
+        class:"button_find_clients_again", params: { lang: I18n.locale } %>
+    </div>
+ </div>

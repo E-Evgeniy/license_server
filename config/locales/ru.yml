@@ -1,4 +1,42 @@
 ru:
+  find_keys:
+    find_key:
+      header: 'Поиск ключа'
+      to_main: 'На главную'
+
+    form:
+      name: 'Имя ключа'
+      range_duration: 'Диапазон длительности ключа в днях'
+      duration_begin: 'Начало диапазона'
+      duration_end: 'Конец диапазона'
+      comment: 'Комментарий'
+      infinite_key: 'Выберите true если ключ бессрочный'
+      status_key: 'Ключ активный'
+      key_type: 'Учитывать тип ключа'
+      period_registration: 'Период регистрации:'
+      data_begin: 'Начало периода'
+      data_end: 'Конец периода'
+      find: 'Найти'
+          
+    result_key:
+      to_main: 'На главную'
+      header: 'Результат поиска ключей'
+      client: 'Клиент'
+      status: 'Статус ключа'
+      name: 'Имя'
+      duration: 'Дней до дезактивации ключа'
+      comment: 'Комментарий'
+      infinite_period: 'Бесконечный срок действия ключа'
+      key_type_id: 'Тип ключа'
+      created_at: 'Дата регистрации ключа'
+      not_find: 'Ничего не найдено :('
+      find_again: 'Поискать снова'
+      duration_true: 'Длительность ключа в днях'
+      num: '№'
+      not_active: 'Не активен'
+      active: 'Aктивен'
+      not_client: 'Ключ не привязан к клиенту'
+
   give_keys:
     give_key:
       header: 'Добавление ключа'
@@ -31,6 +69,9 @@ ru:
       infinite_period: 'Бесконечный срок действия ключа'
       key_type_id: 'Тип ключа'
       created_at: 'Дата регистрации ключа'
+      status_key: 'Статус ключа'
+      active: 'активен'
+      not_active: 'не активен'
 
   find_clients:
     result_client:
@@ -166,6 +207,9 @@ ru:
       login:   'Войти'
       sign_up: 'Зарегистрироваться'
       lang:    'English version'
+    
+    footer:
+      description: 'Приложение для создания, хранения и управления клиентами и ключами для Лео'
   
   clients:
     show:

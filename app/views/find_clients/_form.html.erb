@@ -1,7 +1,7 @@
 <div, class = "text_field_email">
 <%= form_with url: "result_client", method: :get do |form| %>
   <%= form.label t('.name'), class: 'field_description' %><br>
-  <%= form.text_area :name, id: :key_type_name, class: 'text_field_type' %>
+  <%= form.text_area :name, id: :client_type_name, class: 'text_field_type' %>
   <p>
   <%= form.label t('.email'), class: 'field_description' %><br>
   <%= form.text_field :email, id: :client_email, class: 'text_field_email' %>

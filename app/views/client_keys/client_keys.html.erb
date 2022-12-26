@@ -19,6 +19,7 @@
       <th class = 'th_table_show_head'><%=t('.name')%></th>
       <th class = 'th_table_show_head'><%= t('.duration') %></th>
       <th class = 'th_table_show_head'><%= t('.comment') %></th>
+      <th class = 'th_table_show_head'><%= t('.status_key') %></th>
       <th class = 'th_table_show_head'><%= t('.infinite_period') %></th>
       <th class = 'th_table_show_head'><%= t('.key_type_id') %></th>
       <th class = 'th_table_show_head'><%= t('.created_at') %></th>
@@ -37,6 +38,12 @@
         <% end %>
 
         <td class = 'th_table_show'><%= key_obj.comment %></td>
+
+        <% if key_obj.status %>
+          <td class = 'th_table_show_true'><%= t('.active') %></td>
+        <% else %>
+          <td class = 'th_table_show_false'><%= t('.not_ative') %></td>
+        <% end %>
 
         <% if key_obj.infinite_period %>
           <td class = 'th_table_show_true'><%= t('.active') %></td>
