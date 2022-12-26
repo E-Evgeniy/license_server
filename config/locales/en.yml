@@ -48,6 +48,7 @@ en:
       data_end: 'End of the period'
       period_registration: 'Registration period:'
       find: 'Find'
+      
 
     result_key:
       to_main: ' To the main'
@@ -60,6 +61,13 @@ en:
       infinite_period: 'Infinite key validity period'
       key_type_id: 'Key Type'
       created_at: 'Key registration date'
+      not_find: 'Nothing found :('
+      find_again: 'Search again'
+      duration_true: 'Key duration in days'
+      num: '№'
+      not_active: ' Not active'
+      active: ' Ative'
+      not_client: 'The key is not bound to the client'
 
   give_keys:
     give_key:

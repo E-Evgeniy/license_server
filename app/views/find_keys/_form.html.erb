@@ -27,6 +27,7 @@
     <%= t('.status_key') %><br>
     </div>
   <%= form.select :status, [['all'], ['false'], ['true']] %>
+  
   <p>
   
   <%= check_box("consider_the_key_type", "accepted", { class: 'consider_the_key_type' }, "yes", "no") %>
@@ -34,6 +35,10 @@
       <%= f.label :key_type_id, t('.key_type'), class: "description_comment" %><br>
       <%= f.collection_select :key_type_id, KeyType.order(:id), :id, :name, class: "field_new_key_2"%><br>
     <% end %>
+  
+  <p>
+  <%= check_box( "no_client", "accepted", { class: 'consider_the_key_type' }, "yes", "no") %>
+  <%= form.label :key_type_id, t('.no_client'), class: "header_in_form" %><br>
   <p>
   <div class = 'header_in_form'>
     <b><%= t('.period_registration')%></b>

@@ -17,7 +17,7 @@ ru:
       data_begin: 'Начало периода'
       data_end: 'Конец периода'
       find: 'Найти'
-    
+          
     result_key:
       to_main: 'На главную'
       header: 'Результат поиска ключей'
@@ -29,6 +29,13 @@ ru:
       infinite_period: 'Бесконечный срок действия ключа'
       key_type_id: 'Тип ключа'
       created_at: 'Дата регистрации ключа'
+      not_find: 'Ничего не найдено :('
+      find_again: 'Поискать снова'
+      duration_true: 'Длительность ключа в днях'
+      num: '№'
+      not_active: 'Не активен'
+      active: 'Aктивен'
+      not_client: 'Ключ не привязан к клиенту'
 
   give_keys:
     give_key:

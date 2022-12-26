@@ -6,29 +6,26 @@
    </div>
    
    <table class="client_table">
-    <col width="220">
-    <col width="150">
     <col width="230">
+    <col width="150">
+    <col width="220">
     <col width="150">
     <col width="220">
     <col width="150">
     <col width="100">
     <col width="150">
-    <tr>
-      <th class = 'th_table_show_head'><%=t('.client')%></th>
-      <th class = 'th_table_show_head'><%=t('.status')%></th>
+    <tr>      
       <th class = 'th_table_show_head'><%=t('.name')%></th>
+      <th class = 'th_table_show_head'><%=t('.status')%></th>
+      <th class = 'th_table_show_head'><%=t('.client')%></th>
       <th class = 'th_table_show_head'><%= t('.duration') %></th>
       <th class = 'th_table_show_head'><%= t('.comment') %></th>
       <th class = 'th_table_show_head'><%= t('.infinite_period') %></th>
       <th class = 'th_table_show_head'><%= t('.key_type_id') %></th>
       <th class = 'th_table_show_head'><%= t('.created_at') %></th>
     </tr>
-    <% if @product_key.client.nil? %>
-      <td class = 'th_table_show_true'><%= t('.not_client') %></td>
-    <% else %>
-      <td class = 'th_table_show'><%= link_to @product_key.client.name, client_path(@product_key.client) %></td>
-    <% end %>
+   
+    <td class = 'th_table_show'><%= @product_key.name %></td>
     
     <% if @product_key.status %>
       <td class = 'th_table_show_true'><%= t('.active') %></td>
@@ -36,7 +33,13 @@
       <td class = 'th_table_show_false'><%= t('.not_ative') %></td>
     <% end %>  
 
-    <td class = 'th_table_show'><%= @product_key.name %></td>
+     <% if @product_key.client.nil? %>
+      <td class = 'th_table_show_true'><%= t('.not_client') %></td>
+    <% else %>
+      <td class = 'th_table_show'><%= link_to @product_key.client.name, client_path(@product_key.client) %></td>
+    <% end %>
+
+    
 
     <% if @number_days == -1 %>
       <td class = 'th_table_show_true'><%= t('.not_limited') %></td>
