@@ -43,8 +43,8 @@
   <%= form.date_field :data_begin, class: "field_duration"%>
   <p>
   <%= form.label :data_end, t('.data_end'), class: "name_field_duration"%><br>
-  <%= form.date_field :data_end, class: "field_date"%>
+  <%= form.date_field :data_end, class: "field_duration"%>
   <p>
-  <%= button_to t('.find'), result_client_path, method: :get, class:"button_form_new_type", params: { lang: I18n.locale } %>
+  <%= button_to t('.find'), result_client_path, method: :get, class:"button_form_done", params: { lang: I18n.locale } %>
  <% end %>
  </div>

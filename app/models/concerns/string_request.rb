@@ -11,7 +11,8 @@ module StringRequest
     s_duration = ''
     if obj == 'Productkey'
       s_duration = " AND #{find_begin_end(params[:duration_begin],
-                   params[:duration_end], obj, 'duration', 0, 0)}"
+                                          params[:duration_end], obj, 'duration',
+                                          0, 0)}"
     end
 
     s_parametrs = find_parametrs(params)
@@ -26,7 +27,7 @@ module StringRequest
       query_str_strong = check_strong_params(key, value, query_str_strong, params)
     end
 
-    "#{query_str} #{query_str_strong}"    
+    "#{query_str} #{query_str_strong}"
   end
 
   def self.check_strong_params(key, value, result,params)
@@ -44,13 +45,12 @@ module StringRequest
       "#{result} AND key_type_id = #{value['key_type_id']}" if need_key_type(params)
     else
       "#{result} AND #{key} = #{value}" unless value == 'all'
-    end    
+    end
   end
 
   def self.need_key_type(params)
     params['consider_the_key_type']['accepted'] == 'yes'
   end
-    
 
   def self.check_params(key, value, result)
     exceptions = %w[lang data_begin data_end controller action

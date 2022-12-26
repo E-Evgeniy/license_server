@@ -3,9 +3,8 @@
   <div class = 'box_nav'>
     <a href="/" class="nav_botr"><%= t('.to_main') %></a>
   </div'> 
-
-  <div class = 'box_form'>      
-    <table class="keys_table">
+   
+    <table class="table_with_added_keys">
       <col width="70">
       <col width="220">
       <col width="150">
@@ -32,7 +31,14 @@
         <tr>
           <td class = 'th_table_show'><%= i %></td>
           <td class = 'th_table_show'><%= key.name %></td>
+          <td class = 'th_table_show'><%= key.client.name %></td>
+           <% if key.status %>
+          <td class = 'th_table_show_true'><%= t('.active') %></td>
+           <% else %>
+          <td class = 'th_table_show_false'><%= t('.not_ative') %></td>
+        <% end %>
         </tr>
+        <% i += 1 %>
       <% end %>
-    </div>
+    </table>
  </div>

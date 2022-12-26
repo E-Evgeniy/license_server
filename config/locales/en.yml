@@ -254,3 +254,6 @@ en:
       sign_up: 'Sign up'
       lang: 'Русская версия'
       on_header: ' To the main'
+    
+    footer:
+      description: 'An application for creating, storing and managing clients and keys for Leo'

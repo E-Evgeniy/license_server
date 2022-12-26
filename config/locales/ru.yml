@@ -200,6 +200,9 @@ ru:
       login:   'Войти'
       sign_up: 'Зарегистрироваться'
       lang:    'English version'
+    
+    footer:
+      description: 'Приложение для создания, хранения и управления клиентами и ключами для Лео'
   
   clients:
     show:
