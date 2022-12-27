@@ -1,0 +1,19 @@
+ru:
+  devise:
+    registrations:
+      new:
+        registration: 'Регистрация нового пользователя'
+        email: 'Почта'
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        new_registration: 'Зарегистрироваться'
+
+    sessions:
+      new:
+        log_in: 'Войти'
+        new_session: 'Войти'
+        email: 'Почта'
+        first_name: 'Логин'
+        password: 'Пароль'

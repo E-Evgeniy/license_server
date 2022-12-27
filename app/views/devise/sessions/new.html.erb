@@ -1,12 +1,13 @@
-<h2 class = 'new_log'><%= t('.log_in')%></h2>
-<div class = 'log_in'>
+<div class = 'box'>
+<h2 class = 'box_header'><%= t('.log_in')%></h2>
+<div class = 'box_form'>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <%= f.label t('.email'), class: 'field' %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'field' %>
+    <%= f.label t('.first_name'), class: 'field_description' %><br />
+    <%= f.text_field :first_name, class: 'field_name' %>
 
-  <div class="field1">
+  <div class="field_description">
     <%= f.label t('.password'), class: 'field' %><br />
-    <%= f.password_field :password, autocomplete: "current-password", class: 'field' %>
+    <%= f.password_field :password, autocomplete: "current-password", class: 'field_name' %>
    </div>
   <% if devise_mapping.rememberable? %>
     <div class="field">
@@ -17,6 +18,4 @@
   <%= button_to t('.new_session'), new_user_session_path, method: :post, class:"log_in_button", params: { lang: I18n.locale } %>
 <% end %>
 </div>
-<div class = 'links_new'>
-<%= render "devise/shared/links" %>
 </div>
