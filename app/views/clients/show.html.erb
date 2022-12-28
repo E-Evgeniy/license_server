@@ -2,8 +2,9 @@
   <h2 class = 'page_header'><%= t('.header') %></h2>
   <h3 class = 'page_header_new_key_client'><%= @client.name %></h3>
   <div class = 'block_navigate'>
-      <a href="/" class="nav_botr"><%= t('.on_header') %></a>
-   </div>
+        <%= button_to t('.on_header'), root_path, method: :get,
+        class: "nav_botr", params: { lang: I18n.locale } %>
+    </div>
 
   <table class="client_table">
     <col width="300">

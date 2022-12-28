@@ -3,12 +3,20 @@
     padding: 5px;
     border-radius: 5px;
     width: 50%;
+    width:300px;
   }
   
   .flash.notice {
     border-color: green;
+    width:300px;
+    margin: auto;
+    margin-right: 230px;
+    text-align: center;
   }
   
   .flash.alert {
     border-color: #ef2727;
+    width:300px;
+    text-align: center;
+    margin: auto;    
   }

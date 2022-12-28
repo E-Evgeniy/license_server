@@ -1,4 +1,5 @@
 class ProductKeysController < ApplicationController
+  before_action :authenticate_user!
   before_action :load_product_key, only: %i[show destroy edit update]
 
   def show; end

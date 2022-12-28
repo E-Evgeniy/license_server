@@ -1,6 +1,9 @@
 <div class = 'added_keys'>
   <% client = Client.find(@new_keys[0]["client_id"].to_i) %>
-  <h2 class = 'page_header'><%= t('.header')%></h2>
+  <div class = 'block_navigate'>
+        <%= button_to t('.on_header'), root_path, method: :get,
+        class: "nav_botr", params: { lang: I18n.locale } %>
+    </div>
   <h3 class = 'added_keys_client'><%= client.name %></h3>
 
   <table class="table_with_added_keys">

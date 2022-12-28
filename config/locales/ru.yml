@@ -1,8 +1,22 @@
 ru:
+  devise:
+    failure:
+      user:
+        unauthenticated: 'Вам необходимо войти в систему или зарегистрироваться, прежде чем продолжить.'
+
+    sessions:
+      user:
+        signed_in: 'Вход успешно выполнен'
+
+      new:
+        header: 'Вход'
+        email: 'Почта'
+        password: 'Пароль'
+
   find_keys:
     find_key:
       header: 'Поиск ключа'
-      to_main: 'На главную'
+      on_header: 'На главную'
 
     form:
       name: 'Имя ключа'
@@ -20,7 +34,7 @@ ru:
       no_client: 'Ключ не привязан к клиенту'
           
     result_key:
-      to_main: 'На главную'
+      on_header: 'На главную'
       header: 'Результат поиска ключей'
       client: 'Клиент'
       status: 'Статус ключа'
@@ -41,7 +55,7 @@ ru:
   give_keys:
     give_key:
       header: 'Добавление ключа'
-      to_main: 'На главную'
+      on_header: 'На главную'
     
     form:
       key: 'Имя ключа'   
@@ -63,7 +77,7 @@ ru:
   client_keys:
     client_keys:
       header: 'Ключ для'
-      to_main: 'На главную'
+      on_header: 'На главную'
       name: 'Имя'
       duration: 'Дней до дезактивации ключа'
       comment: 'Комментарий'
@@ -77,7 +91,7 @@ ru:
   find_clients:
     result_client:
       header: 'Результаты поиска клиента'
-      to_main: 'На главную'
+      on_header: 'На главную'
       not_find: 'Ничего не найдено :('
       find_again: 'Поискать снова'
       email: 'Почта'
@@ -99,7 +113,7 @@ ru:
 
     find_client:
       header: 'Поиск клиентов'
-      to_main: 'На главную'
+      on_header: 'На главную'
 
   activerecord:
     errors:
@@ -118,14 +132,14 @@ ru:
 
     new:
       header: 'Создание нового типа ключа'
-      to_main: 'На главную'
+      on_header: 'На главную'
 
     edit:
       header: 'Редактирование типа ключа'
-      to_main: 'На главную'
+      on_header: 'На главную'
 
     index:
-      to_main: 'На главную'
+      on_header: 'На главную'
       header: 'Типы ключей'
       question_delete: 'Вы действительно хотите удалить этот тип ключа?'
       name: 'Тип ключа'
@@ -145,11 +159,11 @@ ru:
       created_at: 'Дата регистрации ключа'
       not_limited: 'не ограничен'
       to_client: 'вернуться к клиенту'
-      to_main: 'На главную'         
+      on_header: 'На главную'         
 
   product_keys:
     show:
-      to_main: ' На главную'
+      on_header: ' На главную'
       header: 'Ключ'
       client: 'Клиент'
       status: 'Статус ключа'
@@ -214,7 +228,7 @@ ru:
       created_at: 'Дата регистрации ключа'
       not_limited: 'не ограничен'
       to_client: 'возврат к клиенту'
-      to_main: ' На главную'
+      on_header: ' На главную'
       
     new:
       on_header: 'На главную'

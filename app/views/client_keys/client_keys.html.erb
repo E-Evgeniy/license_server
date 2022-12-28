@@ -4,7 +4,10 @@
   <h3 class = 'added_keys_client'><%= client.name %></h3>
   
   <div class = 'block_navigate'>
-      <a href="/" class="nav_botr_ck"><%= t('.to_main') %></a>
+
+        <%= button_to t('.on_header'), root_path, method: :get,
+        class: "nav_botr", params: { lang: I18n.locale } %>
+
 
   <table class="table_with_added_keys">
     <col width="50">

@@ -2,6 +2,7 @@
 
 # Theis is controller for KeyTypes
 class KeyTypesController < ApplicationController
+  before_action :authenticate_user!
   before_action :load_key_type, only: %i[show edit update destroy]
 
   def index

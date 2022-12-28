@@ -2,6 +2,7 @@
 
 # Controller for product
 class ProductsController < ApplicationController
+  before_action :authenticate_user!
   before_action :load_product, only: %i[show update destroy edit]
 
   def index

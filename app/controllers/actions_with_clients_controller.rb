@@ -1,5 +1,7 @@
 class ActionsWithClientsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def create_keys
     new_keys = []
     number_keys = params[:number_keys].to_i.abs
