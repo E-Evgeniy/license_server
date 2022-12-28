@@ -143,6 +143,7 @@ en:
       on_header: ' To the main'
 
     index:
+      on_header: ' To the main'
       header: 'Types of keys'
       question_delete: 'Do you really want to delete this type of key?'
       name: ' Type of key'
