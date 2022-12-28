@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
   # validates_format_of :email, :with => /.+@.+\..+/i   #/@/
+  before_action :authenticate_user!
   before_action :load_client, only: %i[show destroy edit update]
 
   def show

@@ -30,10 +30,18 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+
+  devise:
+    sessions:
+      new:
+        header: 'Log in'
+        email: 'Email'
+        password: 'Password'
+
   find_keys:
     find_key:
       header: 'Find key'
-      to_main: ' To the main'
+      on_header: ' To the main'
 
     form:
       name: 'Name key'
@@ -51,7 +59,7 @@ en:
       
 
     result_key:
-      to_main: ' To the main'
+      on_header: ' To the main'
       header: 'Key search result'
       client: 'Client'
       status: 'Key status'
@@ -72,7 +80,7 @@ en:
   give_keys:
     give_key:
       header: 'Adding a key'
-      to_main: ' To the main'
+      on_header: ' To the main'
     
     form:
       key: 'Name key'   
@@ -93,7 +101,7 @@ en:
   client_keys:
     client_keys:
       header: 'Keys for'
-      to_main: ' To the main'
+      on_header: ' To the main'
       name: 'Name'
       duration: 'Days before deactivation of the key'
       comment: 'Comment'
@@ -107,13 +115,13 @@ en:
   find_clients:
     result_client:
       header: 'Customer search results'
-      to_main: ' To the main'
+      on_header: ' To the main'
       not_find: 'Nothing found :('
       find_again: 'Search again'
 
     find_client:
       header: 'Customer search'
-      to_main: ' To the main'
+      on_header: ' To the main'
 
     form:
       name: 'Name'
@@ -132,7 +140,7 @@ en:
 
     new:
       header: 'Creating a new key type'
-      to_main: ' To the main'
+      on_header: ' To the main'
 
     index:
       header: 'Types of keys'
@@ -154,11 +162,11 @@ en:
       created_at: 'Key registration date'
       not_limited: 'not limited'
       to_client: 'return to client'
-      to_main: ' To the main'
+      on_header: ' To the main'
 
   product_keys:
     show:
-      to_main: ' To the main'
+      on_header: ' To the main'
       header: 'Key'
       client: 'Client'
       status: 'Key status'
@@ -244,6 +252,10 @@ en:
 
     form:
       create: 'Create'
+      email: 'Email'
+      comment: 'Comment'
+      name: 'Name'
+    
     
     find:
       header: 'Find clients'

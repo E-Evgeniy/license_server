@@ -1,7 +1,8 @@
 <div class = 'new_product_key'>
- <div class = 'block_navigate_edit'>
-      <a href="/" class="nav_bot_edit"><%= t('.on_header') %></a>
-</div>      
+ <div class = 'block_navigate'>
+        <%= button_to t('.on_header'), root_path, method: :get,
+        class: "nav_botr", params: { lang: I18n.locale } %>
+    </div>    
 
   <h2 class = 'page_header_new_key'><%= t('.header')%></h2>
   <h3 class = 'name_key'><%= ProductKey.find(params[:id].to_i).name %></h3>

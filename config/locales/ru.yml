@@ -1,8 +1,22 @@
 ru:
+  devise:
+    failure:
+      user:
+        unauthenticated: 'Вам необходимо войти в систему или зарегистрироваться, прежде чем продолжить.'
+
+    sessions:
+      user:
+        signed_in: 'Вход успешно выполнен'
+
+      new:
+        header: 'Вход'
+        email: 'Почта'
+        password: 'Пароль'
+
   find_keys:
     find_key:
       header: 'Поиск ключа'
-      to_main: 'На главную'
+      on_header: 'На главную'
 
     form:
       name: 'Имя ключа'
@@ -17,9 +31,10 @@ ru:
       data_begin: 'Начало периода'
       data_end: 'Конец периода'
       find: 'Найти'
+      no_client: 'Ключ не привязан к клиенту'
           
     result_key:
-      to_main: 'На главную'
+      on_header: 'На главную'
       header: 'Результат поиска ключей'
       client: 'Клиент'
       status: 'Статус ключа'
@@ -40,7 +55,7 @@ ru:
   give_keys:
     give_key:
       header: 'Добавление ключа'
-      to_main: 'На главную'
+      on_header: 'На главную'
     
     form:
       key: 'Имя ключа'   
@@ -62,7 +77,7 @@ ru:
   client_keys:
     client_keys:
       header: 'Ключ для'
-      to_main: 'На главную'
+      on_header: 'На главную'
       name: 'Имя'
       duration: 'Дней до дезактивации ключа'
       comment: 'Комментарий'
@@ -76,7 +91,7 @@ ru:
   find_clients:
     result_client:
       header: 'Результаты поиска клиента'
-      to_main: 'На главную'
+      on_header: 'На главную'
       not_find: 'Ничего не найдено :('
       find_again: 'Поискать снова'
       email: 'Почта'
@@ -98,7 +113,7 @@ ru:
 
     find_client:
       header: 'Поиск клиентов'
-      to_main: 'На главную'
+      on_header: 'На главную'
 
   activerecord:
     errors:
@@ -117,9 +132,14 @@ ru:
 
     new:
       header: 'Создание нового типа ключа'
-      to_main: 'На главную'
+      on_header: 'На главную'
+
+    edit:
+      header: 'Редактирование типа ключа'
+      on_header: 'На главную'
 
     index:
+      on_header: 'На главную'
       header: 'Типы ключей'
       question_delete: 'Вы действительно хотите удалить этот тип ключа?'
       name: 'Тип ключа'
@@ -139,11 +159,11 @@ ru:
       created_at: 'Дата регистрации ключа'
       not_limited: 'не ограничен'
       to_client: 'вернуться к клиенту'
-      to_main: 'На главную'         
+      on_header: 'На главную'         
 
   product_keys:
     show:
-      to_main: ' На главную'
+      on_header: ' На главную'
       header: 'Ключ'
       client: 'Клиент'
       status: 'Статус ключа'
@@ -162,6 +182,40 @@ ru:
       delete_product_key: 'удалить ключ'
       question_delete: 'Вы действительно хотите удалить этот ключ?'
 
+    new:
+      on_header: 'На главную'
+      header: 'Создание нового ключа для'
+
+    edit:
+      header: 'Редактирование ключа'
+      on_header: 'На главную'
+
+    form_edit:
+      volume_keys_filed: 'Введите целое положительное число'
+      volume_keys: 'Количество необходимых лицензий'
+      volume_days: 'Срок действия лицензии в днях'
+      comment_filed: 'Если необходимо введите комментарий для ключа'
+      comment: 'Комментарий'
+      key_type: 'Выберите тип ключа'
+      infinite_key: 'Выберите true если хотите сделать ключ бессрочным'
+      client_id: 'ID Клиента'
+      nil: 'nil'
+      created_at: 'Дата создания'
+      not_client: 'Ключ не привязан к клиенту'
+      status_key: 'Статус ключа'
+      update: 'Обновить'
+      
+
+    form:
+      create: 'Создать'
+      volume_keys_filed: 'Введите целое положительное число'
+      volume_keys: 'Количество необходимых лицензий'
+      volume_days: 'Срок действия лицензии в днях'
+      comment_filed: 'Если необходимо введите комментарий для ключа'
+      comment: 'Комментарий'
+      key_type: 'Выберите тип ключа'
+      infinite_key: 'Выберите true если хотите сделать ключ бессрочным'
+
 
   added_keys:
     added_keys:
@@ -174,11 +228,11 @@ ru:
       created_at: 'Дата регистрации ключа'
       not_limited: 'не ограничен'
       to_client: 'возврат к клиенту'
-      to_main: ' На главную'
+      on_header: ' На главную'
       
     new:
       on_header: 'На главную'
-      header: 'Создание нового ключа для'
+      header: 'Создание нового ключа для'      
 
     form:
       create: 'Создать'
@@ -229,8 +283,15 @@ ru:
       header: 'Создание нового клиента'
       on_header: 'На главную'
       
+    edit:
+      header: 'Редактирование клиента'
+      on_header: 'На главную'
+      
     form:
       create: 'Создать'
+      email: 'Почта'
+      comment: 'Комментарий'
+      name: 'Имя'
     
     find:
       header: 'Поиск клиентов'

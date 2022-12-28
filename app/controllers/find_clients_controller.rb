@@ -1,4 +1,6 @@
 class FindClientsController < ApplicationController
+  before_action :authenticate_user!
+  
   def find_client; end
 
   def result_client

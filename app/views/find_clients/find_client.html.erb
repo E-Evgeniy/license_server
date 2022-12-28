@@ -2,10 +2,13 @@
   <h2 class = 'page_header'><%= t('.header')%></h2>
   <div class = 'nav_and_form'>    
     <div class = 'block_navigate'>
-      <a href="/" class="nav_botr"><%= t('.to_main') %></a>
+        <%= button_to t('.on_header'), root_path, method: :get,
+        class: "nav_botr", params: { lang: I18n.locale } %>
     </div>
     <div class = 'box_form'>      
       <%= render 'form' %>
+    </div>
+    <div class = 'shift_down'>
     </div>
    </div>
  </div>

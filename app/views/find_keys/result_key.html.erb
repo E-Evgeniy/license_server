@@ -1,9 +1,11 @@
-<div class = 'box'>
-  <h2 class = 'box_header'><%= t('.header')%></h2>
-  <div class = 'box_nav'>
-    <a href="/" class="nav_botr"><%= t('.to_main') %></a>
-  </div> 
-    <% if @keys[0].nil? %>
+<div class = 'index_key_types'>
+  <h2 class = 'page_header'><%= t('.header')%></h2>
+  <div class = 'nav_and_form'>    
+    <div class = 'block_navigate'>
+        <%= button_to t('.on_header'), root_path, method: :get,
+        class: "nav_botr", params: { lang: I18n.locale } %>
+    </div>
+     <% if @keys[0].nil? %>
       <div class = 'not_find' >
         <%= t('.not_find') %> 
       </div>
@@ -76,4 +78,6 @@
         <%= button_to t('.find_again'), find_key_path, method: :get,
         class:"button_find_clients_again", params: { lang: I18n.locale } %>
     </div>
+   </div>
  </div>
+ 
